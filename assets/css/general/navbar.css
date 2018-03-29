@@ -1,0 +1,32 @@
+@media (min-width: 767px) {
+    .navbar-nav .dropdown-menu .caret {
+	transform: rotate(-90deg);
+    }
+}
+
+
+body {
+    padding-top: 50px;
+}
+.navbar-template {
+    padding: 40px 15px;
+}
+
+.usuario{
+    width: 190px !important;
+}
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  margin-top: 20px;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+
+
+

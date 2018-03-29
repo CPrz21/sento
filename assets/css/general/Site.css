@@ -1,0 +1,159 @@
+/**************************************
+* GENERAL
+***************************************/
+a{
+    cursor:pointer !important;
+}
+
+.class-href{
+    color:#3083d1;
+    cursor:pointer !important;
+}
+
+.id-value{
+    color:#3083d1;
+}
+
+
+/**************************************
+* PAGE BODY
+***************************************/
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    background: #fafafa;    
+}
+
+#content_body{
+    max-height: 100vh; 
+    min-width: 100vh;
+    overflow:auto; 
+    padding: 0px 15px 15px 15px;"
+}
+
+
+/**************************************
+* PAGE NAV TOP
+***************************************/
+
+#nav_header{
+    margin-bottom: 0px;
+    background-color: #7386D5;
+}
+/*
+.navbar-right .nav-title{
+    width: 100px;
+
+}
+.navbar-left .nav-screen-options{
+    width: 60%;
+}
+*/
+#title_option{
+    color: #FFFFFF !important;
+}
+
+#user_option{
+    position: absolute;
+    display: none;
+}
+
+/**************************************
+* PAGE NAV LI
+***************************************/
+
+#li-user a{
+    color: #FFFFFF !important;
+    font-weight: bold;
+}
+
+
+/*
+| -------------------------------------------------------------------
+| PARA NAVBAR BOTTOM
+| -------------------------------------------------------------------
+*/   
+
+.div-navbar-bottom{
+    margin: 5px 20px 5px 15px;
+    font-size: 10.5px;
+}    
+
+.lbl-cantidad-registros{
+    font-size:10.5px !important;   
+    font-weight: bold !important;
+    color:rgb(0, 0, 0) !important;
+    text-align:left !important;
+}
+.lbl-color-red{
+    color: red !important;
+}
+.lbl-color-blue{
+    color: rgba(36,64,90,1) !important;
+}
+.lbl-color-black-bold{
+    color: rgb(0, 0, 0) !important;
+}
+.button-nav-bar-botton{
+    font-size:10px !important;
+    padding-top:2px !important;
+    padding-bottom:2px !important;
+    background-color:#7386D5 !important;
+    border-color: #5368C0 !important;
+    color:#FFF;
+    min-width: 40px;
+    max-width: 102px;
+    height:25px !important;
+    /*width: 100px;*/
+}
+.button-nav-bar-botton:hover{
+    font-size:10px !important;
+    padding-top:2px !important;
+    padding-bottom:2px !important;
+    background-color:#6d7fcc !important;
+    border-color: #354896 !important;
+    color:#FFF;
+    min-width: 40px;
+    max-width: 102px;
+    height:25px !important;
+    /*width: 100px;*/
+}
+
+.button-nav-bar-botton-action{
+    font-size:10px !important;
+    padding-top:2px !important;
+    padding-bottom:2px !important;
+    background-color:rgb(15, 87, 148) !important;
+    color:#FFF;
+    min-width: 40px;
+    max-width: 102px;
+    height:25px !important;
+    /*width: 100px;*/
+}
+.button-nav-bar-add{
+    font-size:10px !important;
+    padding-top:2px !important;
+    padding-bottom:2px !important;
+    background-color:rgb(59, 131, 194) !important;
+    color:#FFF;
+    min-width: 40px;        
+    height:30px !important;
+    /*width: 100px;*/
+}
+.button-nav-bar-delete{
+    font-size:10px !important;
+    padding-top:2px !important;
+    padding-bottom:2px !important;
+    background-color:#d44d4d !important;
+    color:#FFF;
+    min-width: 40px;        
+    height:30px !important;
+    /*width: 100px;*/
+}
+
+
+
+/**************************************
+* TABLE
+***************************************/
