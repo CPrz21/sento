@@ -10,7 +10,9 @@ class Post extends CI_Controller {
   public function index()
 {
   $data = array(
-          'assets_uri' => base_url() . 'assets/'
+          'assets_uri' => base_url() . 'assets/',
+					'libs_url' => base_url().'App/libs/',
+					'_url' => base_url().'App/'
           );
   $this->load->view('index/index', $data);
 }

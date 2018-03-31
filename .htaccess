@@ -8,6 +8,6 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 #This last condition enables access to the images and css folders, and the robots.txt file
 RewriteCond $1 !^(index\.php|public|assets|robots\.txt)
-RewriteRule ^(.*)$ /localPA/index.php/$1 [L]
+RewriteRule ^(.*)$ /Sento/index.php/$1 [L]
 AddDefaultCharset UTF-8
 </IfModule>
