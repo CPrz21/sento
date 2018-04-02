@@ -1,49 +1,23 @@
-<lx-tabs>
-  <lx-tab heading="Posts">
-    <div class="p+">
-      <div class="card top-space" ng-repeat="post in posts">
-        <div class="p+">
-          <strong class="fs-headline display-block tc-red-900">
-          {{post.title}}
-          </strong>
-          <div class="paragraph fs-body-1 mt+">
-            {{post.body}}
-          </div>
-          <div class="card__actions">
-            <!-- <a href="#!/post/{{post.id}}" class="btn btn--m btn--blue btn--flat" lx-ripple>Leer más</a> -->
-            <a href="#!/post/{{post.id}}" class="btn btn--m btn--blue btn--flat" lx-ripple>Leer más</a>
-            <a href="#!/posts/edit/{{post.id}}" class="btn btn--m btn--orange btn--flat" lx-ripple>Editar</a>
-            <a ng-click="removePost(post)" class="btn btn--m btn--red btn--flat" lx-ripple>Eliminar</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </lx-tab>
-  <lx-tab heading="Users">
-    <div class="p+">
-      <!-- <div class="card top-space" ng-repeat="user in users"> -->
-        <div class="card top-space">
-        <div flex-container="row">
-          <div class="card__img card__img--left" style="height: 160px;">
-            <img src="imgs/user.jpg" alt="">
-          </div>
-          <div flex-item flex-container="column">
-            <div flex-item>
-              <strong class="fs-headline display-block">
-                <!-- {{user.name}} -->
-              </strong>
-              <stron class="fs-subhead tc-black-2 display-block">
-                <!-- {{user.email}} -->
-              </strong>
-            </div>
-            <div class="card__actions">
-              <a href="#">Ver usuario</a>
-            </div>
-          </div>
-        </div>
+<div class="col-12 pr-0 pl-0">
+  <section id="her" style="height:100vh; background-color:blue;">
+  <h1>hola</h1>
+  </section>
+  <section id="him" style="height:100vh; background-color:red;">
 
-      </div>
-    </div>
-  </lx-tab>
+  </section>
+  <section id="spa" style="height:100vh; background-color:pink;">
 
-</lx-tabs>
+  </section>
+  <section id="special_gifts" style="height:100vh; background-color:gray;">
+
+  </section>
+  <section id="seasons_gifts" style="height:100vh; background-color:gray;">
+
+  </section>
+  <section id="gallery" style="height:100vh; background-color:gray;">
+
+  </section>
+  <section id="contactus" style="height:100vh; background-color:gray;">
+
+  </section>
+</div>
