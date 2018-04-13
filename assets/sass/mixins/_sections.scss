@@ -1,0 +1,17 @@
+// =============================================================================
+// MIXINS FOR SECTIONS
+// =============================================================================
+@mixin sections($bg:null,$color:$white_color,$height:100vh,$padding:0.5rem 0 0 0) {
+  height:$height;
+  padding:$padding;
+  color: $color;
+  @include background_image($bg);
+}
+@mixin row_sections($justify:center,$display:flex,$align:center,$height:100vh) {
+  display:$display;
+  align-items:$align;
+  height:$height;
+  justify-content:$justify;
+}
+
+// =============================================================================

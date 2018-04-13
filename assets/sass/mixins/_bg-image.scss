@@ -1,0 +1,12 @@
+// =============================================================================
+// MIXINS FOR BACKGROUND-IMAGE
+// =============================================================================
+@mixin background_image($imgpath,$size:cover,$position:null ,$repeat: no-repeat) {
+    background: {
+        image: url($imgpath);
+        position: $position;
+        repeat: $repeat;
+        size: $size;
+    }
+}
+// =============================================================================

@@ -24,7 +24,9 @@
 	<!-- ANGULAR CONTROLLERS -->
 	<script src="<?php echo $_url; ?>app.js"></script>
 	<script src="<?php echo $_url; ?>services.js"></script>
+	<script src="<?php echo $_url; ?>functions.js"></script>
 	<script src="<?php echo $_url; ?>controllers.js"></script>
+	<script src="<?php echo $_url; ?>filters.js"></script>
 
 </head>
 <body>

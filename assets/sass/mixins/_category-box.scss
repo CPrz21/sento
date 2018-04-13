@@ -1,0 +1,18 @@
+// =============================================================================
+// MIXINS FOR CATEGORIE BOX (HER,HIM,SPA)
+// =============================================================================
+@mixin category_box($txtalign: center,$bg:$whiteWopacity_color,$color: $black_color,$padding: 2rem 4rem) {
+  text-align: $txtalign;
+  background-color: $bg;
+  color: $color;
+  padding: $padding;
+}
+
+@mixin category_box_content($display: inline-block,$border-b: 1px solid $orange_color,$border-t: 1px solid $orange_color,$margin: 1rem 0 2rem 0,$padding: 1.5rem 0) {
+  display: $display;
+  border-bottom: $border-b;
+  border-top: $border-t;
+  margin: $margin;
+  padding: $padding;
+}
+// =============================================================================

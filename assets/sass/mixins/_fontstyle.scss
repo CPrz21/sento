@@ -1,0 +1,11 @@
+// =============================================================================
+// MIXINS FOR FONT STYLE
+// =============================================================================
+@mixin fontstyle($font:null,$letterSpacing:null,$fontsize:null, $color:$black_color) {
+  font-family: $font;
+  letter-spacing: $letterSpacing;
+  font-size: $fontsize;
+  color:$color;
+}
+
+// =============================================================================

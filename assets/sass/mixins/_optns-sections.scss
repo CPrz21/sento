@@ -1,0 +1,22 @@
+// =============================================================================
+// MIXINS FOR OPTNS SECTIONS (HER_OPTNS,HIM_OPTNS,SPA_OPTNS)
+// =============================================================================
+@mixin height_items_container($height: 80vh,$overflow: auto) {
+  height: $height;
+  overflow: $overflow;
+}
+@mixin items_btnBook($color:$white_color,$margin: 0,$bg: $orange_color,$padding: 0.7rem 1rem) {
+  color:$color;
+  margin: $margin;
+  background: $bg;
+  padding: $padding;
+}
+@mixin items_msgBook($margin: 0,$padding: 0 0 0 3%, $bcolor:$orange_color) {
+  margin: 0;
+  padding: 0 0 0 3%;
+  font-weight: bold;
+  b{
+    color:$bcolor;
+  }
+}
+// =============================================================================

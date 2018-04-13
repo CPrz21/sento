@@ -1,13 +1,6 @@
-app.filter('range', function() {
-  return function(input, total) {
-    total = parseInt(total);
-    for (var i=0; i<total; i++)
-      input.push(i);
-    return input;
-  };
-});
 app.controller('MainController', function($scope,$http,$resource,PostResource,$document) {
   $scope.url=base_url;
+  $scope.urlTemplates=urlTemplates;
   $scope.isNavCollapsed = true;
   $scope.isCollapsed = false;
   $scope.isCollapsedHorizontal = false;
@@ -19,16 +12,8 @@ app.controller('MainController', function($scope,$http,$resource,PostResource,$d
 
 
 }).value('duScrollOffset', 0)
-.controller('DropdownController', DropdownController);
-
-function DropdownController() {
-  var vm = this;
-
-  vm.isCollapsed = true;
-  vm.status = {
-    isopen: false
-  }
-}
+.controller('DropdownController', DropdownController)
+.controller('tabsSwipeCtrl', tabsSwipeCtrlFn)
 
 // .controller("MainController",function($scope,$resource,PostResource){
 //   User = $resource("http://jsonplaceholder.typicode.com/users/:id", {id:"@id"});
