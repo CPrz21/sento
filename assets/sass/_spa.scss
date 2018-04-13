@@ -1,0 +1,18 @@
+#spa{
+  @include sections($bg_SpaSection);
+
+  .row{
+    @include row_sections();
+    .col-md-5{
+      @include category_box();
+      h1{
+        @include fontstyle($h1_font,0.6rem,null);
+        @include category_box_content();
+        width: 90%;
+      }
+      p{
+        @include fontstyle($p_font,null,14px);
+      }
+    }
+  }
+}

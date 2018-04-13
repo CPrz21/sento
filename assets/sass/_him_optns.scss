@@ -1,0 +1,44 @@
+#him_optns{
+  @include sections(null, $black_color,100vh,5.5rem 0 0 0);
+
+  .row{
+    .col-md-3{
+      line-height: 0.8rem;
+      padding: 1% 0 0 2%;
+      p{
+        @include fontstyle($sidemenu-itemFont,null,12px);
+      }
+    }
+    .col-md-8{
+      @include height_items_container();
+      .row{
+        .head-item{
+          h3{
+            margin: 0;
+            @include fontstyle($head-itemFont,2px,25px);
+          }
+          .pr-5{
+            border-right: 2px solid $black_color
+          }
+        }
+        .info-item{
+          p{
+            @include fontstyle($info-itemFont,1px,14px);
+          }
+        }
+        .btns-item{
+
+            .btnBook{
+              @include fontstyle($btns-itemFont,1px,12px,$white_color);
+              @include items_btnBook();
+            }
+            .msgBook{
+              @include fontstyle($msg-itemFont,null,14px);
+              @include items_msgBook();
+            }
+
+        }
+      }
+    }
+  }
+}

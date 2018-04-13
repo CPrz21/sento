@@ -1,0 +1,355 @@
+@font-face {
+  font-family: "SegoeUIItalic";
+  src: url("fonts/SegoeUIItalic.ttf") format("truetype"); }
+@font-face {
+  font-family: "SegoeUILightItalic";
+  src: url("fonts/SegoeUILightItalic.ttf") format("truetype"); }
+@font-face {
+  font-family: "SegoeUILightRegular";
+  src: url("fonts/SegoeUILightRegular.ttf") format("truetype"); }
+@font-face {
+  font-family: "SegoeUIRegular";
+  src: url("fonts/SegoeUIRegular.ttf") format("truetype"); }
+@font-face {
+  font-family: "SegoeUISemiboldItalic";
+  src: url("fonts/SegoeUISemiboldItalic.ttf") format("truetype"); }
+@font-face {
+  font-family: "SegoeUISemiboldRegular";
+  src: url("fonts/SegoeUISemiboldRegular.ttf") format("truetype"); }
+@font-face {
+  font-family: "SegoeUISemiLightRegular";
+  src: url("fonts/SegoeUISemiLightRegular.ttf") format("truetype"); }
+/* H1 de titulos (MAIN, HER, HIM, SPA) */
+/* H6 de subtitulo (MAIN) */
+/* P para descripcion de titulos(HER, HIM, SPA) */
+/*Font de sidemenu de secciones OPTNS*/
+/*font de titulo de item*/
+/* font de info de item*/
+/*font de boton book xperience de items*/
+/*font de mensaje a la par de btn book xperience*/
+.c-pointer {
+  cursor: pointer; }
+
+#main {
+  height: 100vh;
+  padding: 0.5rem 0 0 0;
+  color: white;
+  background-image: url("../Images/sections/4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  #main .row {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center; }
+    #main .row .col-md-12 {
+      text-align: center; }
+      #main .row .col-md-12 h1 {
+        font-family: SegoeUILightRegular;
+        letter-spacing: 0.8rem;
+        color: white; }
+    #main .row .col-md-5 {
+      border-bottom: 1px solid white;
+      margin: 0 auto; }
+    #main .row .col-md-6 {
+      margin: 0 auto;
+      background-color: rgba(242, 242, 242, 0.7); }
+      #main .row .col-md-6 h6 {
+        font-family: SegoeUISemiboldRegular;
+        letter-spacing: 0.2rem;
+        color: black;
+        padding: 0.4rem 0; }
+
+#her {
+  height: 100vh;
+  padding: 0.5rem 0 0 0;
+  color: white;
+  background-image: url("../Images/sections/5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  #her .row {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: right; }
+    #her .row .col-md-5 {
+      text-align: center;
+      background-color: rgba(242, 242, 242, 0.7);
+      color: black;
+      padding: 2rem 4rem; }
+      #her .row .col-md-5 h1 {
+        font-family: SegoeUILightRegular;
+        letter-spacing: 0.6rem;
+        color: black;
+        display: inline-block;
+        border-bottom: 1px solid #b28657;
+        border-top: 1px solid #b28657;
+        margin: 1rem 0 2rem 0;
+        padding: 1.5rem 0; }
+      #her .row .col-md-5 p {
+        font-family: SegoeUIRegular;
+        font-size: 14px;
+        color: black; }
+
+#her_optns {
+  height: 100vh;
+  padding: 5.5rem 0 0 0;
+  color: black;
+  background-image: url();
+  background-repeat: no-repeat;
+  background-size: cover; }
+  #her_optns .row .col-md-3 {
+    line-height: 0.8rem;
+    padding: 1% 0 0 2%; }
+    #her_optns .row .col-md-3 p {
+      font-family: SegoeUISemiboldRegular;
+      font-size: 12px;
+      color: black; }
+  #her_optns .row .col-md-8 {
+    height: 80vh;
+    overflow: auto; }
+    #her_optns .row .col-md-8 .row .head-item h3 {
+      margin: 0;
+      font-family: SegoeUILightRegular;
+      letter-spacing: 2px;
+      font-size: 25px;
+      color: black; }
+    #her_optns .row .col-md-8 .row .head-item .pr-5 {
+      border-right: 2px solid black; }
+    #her_optns .row .col-md-8 .row .info-item p {
+      font-family: SegoeUIRegular;
+      letter-spacing: 1px;
+      font-size: 14px;
+      color: black; }
+    #her_optns .row .col-md-8 .row .btns-item .btnBook {
+      font-family: SegoeUISemiboldRegular;
+      letter-spacing: 1px;
+      font-size: 12px;
+      color: white;
+      margin: 0;
+      background: #b28657;
+      padding: 0.7rem 1rem; }
+    #her_optns .row .col-md-8 .row .btns-item .msgBook {
+      font-family: SegoeUILightRegular;
+      font-size: 14px;
+      color: black;
+      margin: 0;
+      padding: 0 0 0 3%;
+      font-weight: bold; }
+      #her_optns .row .col-md-8 .row .btns-item .msgBook b {
+        color: #b28657; }
+
+#him {
+  height: 100vh;
+  padding: 0.5rem 0 0 0;
+  color: white;
+  background-image: url("../Images/sections/3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  #him .row {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center; }
+    #him .row .col-md-5 {
+      text-align: center;
+      background-color: rgba(242, 242, 242, 0.7);
+      color: black;
+      padding: 2rem 4rem; }
+      #him .row .col-md-5 h1 {
+        font-family: SegoeUILightRegular;
+        letter-spacing: 0.6rem;
+        color: black;
+        display: inline-block;
+        border-bottom: 1px solid #b28657;
+        border-top: 1px solid #b28657;
+        margin: 1rem 0 2rem 0;
+        padding: 1.5rem 0; }
+      #him .row .col-md-5 p {
+        font-family: SegoeUIRegular;
+        font-size: 14px;
+        color: black; }
+
+#him_optns {
+  height: 100vh;
+  padding: 5.5rem 0 0 0;
+  color: black;
+  background-image: url();
+  background-repeat: no-repeat;
+  background-size: cover; }
+  #him_optns .row .col-md-3 {
+    line-height: 0.8rem;
+    padding: 1% 0 0 2%; }
+    #him_optns .row .col-md-3 p {
+      font-family: SegoeUISemiboldRegular;
+      font-size: 12px;
+      color: black; }
+  #him_optns .row .col-md-8 {
+    height: 80vh;
+    overflow: auto; }
+    #him_optns .row .col-md-8 .row .head-item h3 {
+      margin: 0;
+      font-family: SegoeUILightRegular;
+      letter-spacing: 2px;
+      font-size: 25px;
+      color: black; }
+    #him_optns .row .col-md-8 .row .head-item .pr-5 {
+      border-right: 2px solid black; }
+    #him_optns .row .col-md-8 .row .info-item p {
+      font-family: SegoeUIRegular;
+      letter-spacing: 1px;
+      font-size: 14px;
+      color: black; }
+    #him_optns .row .col-md-8 .row .btns-item .btnBook {
+      font-family: SegoeUISemiboldRegular;
+      letter-spacing: 1px;
+      font-size: 12px;
+      color: white;
+      margin: 0;
+      background: #b28657;
+      padding: 0.7rem 1rem; }
+    #him_optns .row .col-md-8 .row .btns-item .msgBook {
+      font-family: SegoeUILightRegular;
+      font-size: 14px;
+      color: black;
+      margin: 0;
+      padding: 0 0 0 3%;
+      font-weight: bold; }
+      #him_optns .row .col-md-8 .row .btns-item .msgBook b {
+        color: #b28657; }
+
+#spa {
+  height: 100vh;
+  padding: 0.5rem 0 0 0;
+  color: white;
+  background-image: url("../Images/sections/2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  #spa .row {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center; }
+    #spa .row .col-md-5 {
+      text-align: center;
+      background-color: rgba(242, 242, 242, 0.7);
+      color: black;
+      padding: 2rem 4rem; }
+      #spa .row .col-md-5 h1 {
+        font-family: SegoeUILightRegular;
+        letter-spacing: 0.6rem;
+        color: black;
+        display: inline-block;
+        border-bottom: 1px solid #b28657;
+        border-top: 1px solid #b28657;
+        margin: 1rem 0 2rem 0;
+        padding: 1.5rem 0;
+        width: 90%; }
+      #spa .row .col-md-5 p {
+        font-family: SegoeUIRegular;
+        font-size: 14px;
+        color: black; }
+
+#spa_optns {
+  height: 100vh;
+  padding: 5.5rem 0 0 0;
+  color: black;
+  background-image: url();
+  background-repeat: no-repeat;
+  background-size: cover; }
+  #spa_optns .row .col-md-3 {
+    line-height: 0.8rem;
+    padding: 1% 0 0 2%; }
+    #spa_optns .row .col-md-3 p {
+      font-family: SegoeUISemiboldRegular;
+      font-size: 12px;
+      color: black; }
+  #spa_optns .row .col-md-8 {
+    height: 80vh;
+    overflow: auto; }
+    #spa_optns .row .col-md-8 .row .head-item h3 {
+      margin: 0;
+      font-family: SegoeUILightRegular;
+      letter-spacing: 2px;
+      font-size: 25px;
+      color: black; }
+    #spa_optns .row .col-md-8 .row .head-item .pr-5 {
+      border-right: 2px solid black; }
+    #spa_optns .row .col-md-8 .row .info-item p {
+      font-family: SegoeUIRegular;
+      letter-spacing: 1px;
+      font-size: 14px;
+      color: black; }
+    #spa_optns .row .col-md-8 .row .btns-item .btnBook {
+      font-family: SegoeUISemiboldRegular;
+      letter-spacing: 1px;
+      font-size: 12px;
+      color: white;
+      margin: 0;
+      background: #b28657;
+      padding: 0.7rem 1rem; }
+    #spa_optns .row .col-md-8 .row .btns-item .msgBook {
+      font-family: SegoeUILightRegular;
+      font-size: 14px;
+      color: black;
+      margin: 0;
+      padding: 0 0 0 3%;
+      font-weight: bold; }
+      #spa_optns .row .col-md-8 .row .btns-item .msgBook b {
+        color: #b28657; }
+
+#special_gifts {
+  height: 100vh;
+  padding: 0.5rem 0 0 0;
+  color: black;
+  background-image: url();
+  background-repeat: no-repeat;
+  background-size: cover; }
+  #special_gifts .l-gc {
+    height: 100vh;
+    padding: 0 0 0 10%; }
+    #special_gifts .l-gc h3 {
+      margin: 0;
+      font-family: SegoeUILightRegular;
+      letter-spacing: 5px;
+      color: black; }
+    #special_gifts .l-gc div {
+      border-bottom: 1px solid #b28657;
+      width: 4rem;
+      margin: 2% 0; }
+    #special_gifts .l-gc p {
+      font-family: SegoeUIRegular;
+      letter-spacing: 1px;
+      font-size: 14px;
+      color: black; }
+  #special_gifts .r-gc .col-md-12 {
+    height: 100vh; }
+    #special_gifts .r-gc .col-md-12 .title-gcd {
+      font-family: SegoeUISemiboldRegular;
+      letter-spacing: 5px;
+      font-size: 16px;
+      color: black; }
+    #special_gifts .r-gc .col-md-12 form {
+      font-family: SegoeUISemiboldRegular;
+      font-size: 12px;
+      color: black; }
+      #special_gifts .r-gc .col-md-12 form label {
+        margin: 0;
+        width: 15%; }
+      #special_gifts .r-gc .col-md-12 form p {
+        cursor: pointer;
+        margin: 0 1%;
+        padding: 1% 2%;
+        border: 1px solid; }
+      #special_gifts .r-gc .col-md-12 form input {
+        margin: 0 1%;
+        width: 60%;
+        border: 1px solid black;
+        padding: 1%; }
+      #special_gifts .r-gc .col-md-12 form textarea {
+        margin: 0 1%;
+        width: 60%;
+        border: 1px solid black;
+        padding: 1%; }
+
+/*# sourceMappingURL=SentoStyle.css.map */

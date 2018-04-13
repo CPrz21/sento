@@ -1,0 +1,17 @@
+#her{
+  @include sections($bg_HerSection);
+
+  .row{
+    @include row_sections(right);
+    .col-md-5{
+      @include category_box();
+      h1{
+        @include fontstyle($h1_font,0.6rem,null);
+        @include category_box_content();
+      }
+      p{
+        @include fontstyle($p_font,null,14px);
+      }
+    }
+  }
+}

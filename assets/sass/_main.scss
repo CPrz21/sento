@@ -1,0 +1,25 @@
+#main{
+  @include sections($bg_MainSection);
+
+  .row{
+    @include row_sections();
+    .col-md-12{
+      text-align: center;
+      h1{
+        @include fontstyle($h1_font,0.8rem,null,$white_color);
+      }
+    }
+    .col-md-5{
+      border-bottom: 1px solid $white_color;
+      margin: 0 auto;
+    }
+    .col-md-6{
+      margin:0 auto;
+      background-color: $whiteWopacity_color;
+      h6{
+        @include fontstyle($h6_font,0.2rem,null);
+        padding: 0.4rem 0;
+      }
+    }
+  }
+}

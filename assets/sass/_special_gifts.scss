@@ -1,0 +1,53 @@
+#special_gifts{
+  @include sections(null,$black_color);
+  .l-gc{
+    height:100vh;
+    padding:0 0 0 10%;
+
+    h3{
+      margin: 0;
+      @include fontstyle($head-giftLFont,5px,null);
+    }
+    div{
+      border-bottom: 1px solid $orange_color;
+      width: 4rem;
+      margin: 2% 0;
+    }
+    p{
+      @include fontstyle($info-itemFont,1px,14px);
+    }
+  }
+  .r-gc{
+    .col-md-12{
+      height:100vh;
+      .title-gcd{
+        @include fontstyle($sidemenu-itemFont,5px,16px);
+      }
+      form{
+        @include fontstyle($sidemenu-itemFont,null,12px);
+        label{
+          margin: 0;
+          width: 15%;
+        }
+        p{
+          cursor: pointer;
+          margin: 0 1%;
+          padding: 1% 2%;
+          border: 1px solid;
+        }
+        input{
+          margin: 0 1%;
+          width: 60%;
+          border: 1px solid black;
+          padding: 1%;
+        }
+        textarea{
+          margin: 0 1%;
+          width: 60%;
+          border: 1px solid black;
+          padding: 1%;
+        }
+      }
+    }
+  }
+}

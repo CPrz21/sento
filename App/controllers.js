@@ -1,4 +1,13 @@
+app.filter('range', function() {
+  return function(input, total) {
+    total = parseInt(total);
+    for (var i=0; i<total; i++)
+      input.push(i);
+    return input;
+  };
+});
 app.controller('MainController', function($scope,$http,$resource,PostResource,$document) {
+  $scope.url=base_url;
   $scope.isNavCollapsed = true;
   $scope.isCollapsed = false;
   $scope.isCollapsedHorizontal = false;

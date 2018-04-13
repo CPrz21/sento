@@ -3,6 +3,9 @@
 <head>
 	<title>Sento</title>
 
+	<!-- SENTO STYLE CSS -->
+	<link rel="stylesheet" href="<?php echo $assets_uri; ?>css/SentoStyle.css">
+
 	<!-- BOOTSTRAP 4 CSS -->
 	<link rel="stylesheet" href="<?php echo $assets_uri; ?>css/plugins/bootstrap/bootstrap.css">
 
@@ -33,14 +36,14 @@
 
 	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 	    <ul class="navbar-nav mr-auto">
-	      <li class="nav-item active">
-	        <a class="nav-link" href="#her" du-smooth-scroll du-scrollspy>Her<span class="sr-only">(current)</span></a>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#her_optns" du-smooth-scroll du-scrollspy>Her</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="#him" du-smooth-scroll du-scrollspy>Him</a>
+	        <a class="nav-link" href="#him_optns" du-smooth-scroll du-scrollspy>Him</a>
 	      </li>
 				<li class="nav-item">
-	        <a class="nav-link" href="#spa" du-smooth-scroll du-scrollspy>Spa</a>
+	        <a class="nav-link" href="#spa_optns" du-smooth-scroll du-scrollspy>Spa</a>
 	      </li>
 				<li class="nav-item">
 	        <a class="nav-link" href="#special_gifts" du-smooth-scroll du-scrollspy>Special Gifts</a>

@@ -1,0 +1,39 @@
+@include font-face(SegoeUIItalic, fonts/SegoeUIItalic, null, null, ttf);
+@include font-face(SegoeUILightItalic, fonts/SegoeUILightItalic, null, null, ttf);
+@include font-face(SegoeUILightRegular, fonts/SegoeUILightRegular, null, null, ttf);
+@include font-face(SegoeUIRegular, fonts/SegoeUIRegular, null, null, ttf);
+@include font-face(SegoeUISemiboldItalic, fonts/SegoeUISemiboldItalic, null, null, ttf);
+@include font-face(SegoeUISemiboldRegular, fonts/SegoeUISemiboldRegular, null, null, ttf);
+@include font-face(SegoeUISemiLightRegular, fonts/SegoeUISemiLightRegular, null, null, ttf);
+
+//COLORES
+$black_color:hsl(0, 0%, 0%);
+$white_color:hsl(0, 0%, 100%);
+$whiteWopacity_color:hsla(0, 0%,95%, 0.7);
+$orange_color:hsl(31, 37%, 52%);
+
+//------------------------------------
+//FUENTES DE WEBSITE SENTO
+//------------------------------------
+//FUENTES DE ITEMS (HER_OPTNS, HIM_OPTNS, SPA_OPTNS)
+$h1_font:SegoeUILightRegular;/* H1 de titulos (MAIN, HER, HIM, SPA) */
+$h6_font:SegoeUISemiboldRegular;/* H6 de subtitulo (MAIN) */
+$p_font:SegoeUIRegular;/* P para descripcion de titulos(HER, HIM, SPA) */
+
+//FUENTES DE ITEMS (HER_OPTNS, HIM_OPTNS, SPA_OPTNS)
+$sidemenu-itemFont:SegoeUISemiboldRegular;/*Font de sidemenu de secciones OPTNS*/
+$head-itemFont:SegoeUILightRegular;/*font de titulo de item*/
+$info-itemFont:SegoeUIRegular;/* font de info de item*/
+$btns-itemFont:SegoeUISemiboldRegular;/*font de boton book xperience de items*/
+$msg-itemFont:SegoeUILightRegular;/*font de mensaje a la par de btn book xperience*/
+
+//FUENTES PARA SECCION SPECIAL GIFTS
+$head-giftLFont:SegoeUILightRegular;
+
+//------------------------------------
+
+//URL BACKGROUNDS DE SECCIONES
+$bg_MainSection:('../Images/sections/4.jpg');
+$bg_HerSection:('../Images/sections/5.jpg');
+$bg_HimSection:('../Images/sections/3.jpg');
+$bg_SpaSection:('../Images/sections/2.jpg');
