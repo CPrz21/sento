@@ -97,7 +97,7 @@
 }
 #special_gifts{
   @include sections(null,$black_color);
-  .l-gc{
+  .l-sg{
     height:100vh;
     padding:0 0 0 10%;
 
@@ -114,42 +114,115 @@
       @include fontstyle($info-itemFont,1px,14px);
     }
   }
-  .r-gc{
-    .col-md-12{
-      height:100vh;
-      .title-gcd{
-        @include fontstyle($sidemenu-itemFont,5px,16px);
+  .r-sg{
+    @include custom-select();
+    h6{
+      @include fontstyle($sidemenu-itemFont,5px,16px);
+    }
+    form{
+      @include fontstyle($sidemenu-itemFont,null,12px);
+      .form-divs{
+        display: flex;
+        align-items: center;
+        padding: 1% 0;
+        .lbl-divs{
+          display: inline-flex;
+          flex-basis:15%;
+          label{
+            margin: 0;
+          }
+        }
+        .lbl-optns-divs{
+          display: inline-flex;
+          flex-basis:85%;
+          p{
+            cursor: pointer;
+            margin: 0 2% 0 0;
+            padding: 1% 2%;
+            border: 1px solid;
+          }
+          label{
+            font-family: SegoeUIRegular;
+            color: red;
+            letter-spacing: 1px;
+            font-size: 10px;
+          }
+        }
+        .lbl-optns-inpt{
+          display: inline-flex;
+          flex-basis:50%;
+          input,textarea{
+            width: 100%;
+            font-family: SegoeUIRegular;
+            font-size: 10px;
+            text-transform: lowercase;
+            border: 1px solid black;
+            padding: 2%;
+          }
+        }
       }
-      form{
-        @include fontstyle($sidemenu-itemFont,null,12px);
-        label{
-          margin: 0;
-          width: 15%;
+      .line-bottom-sg{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3% 0;
+        border-top: 1px solid $orange_color;
+        width: 65%;
+        margin: 5% 0;
+        .add-gc{
+          @include items_btnBook($white-color,1px);
+          border: 0;
         }
         p{
-          cursor: pointer;
-          margin: 0 1%;
-          padding: 1% 2%;
-          border: 1px solid;
-        }
-        input{
-          margin: 0 1%;
-          width: 60%;
-          border: 1px solid black;
-          padding: 1%;
-        }
-        textarea{
-          margin: 0 1%;
-          width: 60%;
-          border: 1px solid black;
-          padding: 1%;
-        }
-        .add-gc{
-          @include items_btnBook($white-color);
+          color:$orange_color;
           border: 0;
-
+          margin: 0 0 0 0;
+          padding: 0;
+        }
+        .terms-p{
+          @include fontstyle($Terms-sgFont,null,12px);
+          padding-top: 5%;
+          b{
+            color: $orange_color;
+          }
         }
       }
     }
+    // .col-md-12{
+    //   height:100vh;
+    //   .title-gcd{
+    //     @include fontstyle($sidemenu-itemFont,5px,16px);
+    //   }
+    //   form{
+    //     @include fontstyle($sidemenu-itemFont,null,12px);
+    //     label{
+    //       margin: 0;
+    //       width: 15%;
+    //     }
+    //     p{
+    //       cursor: pointer;
+    //       margin: 0 1%;
+    //       padding: 1% 2%;
+    //       border: 1px solid;
+    //     }
+    //     input{
+    //       margin: 0 1%;
+    //       width: 60%;
+    //       border: 1px solid black;
+    //       padding: 1%;
+    //     }
+    //     textarea{
+    //       margin: 0 1%;
+    //       width: 60%;
+    //       border: 1px solid black;
+    //       padding: 1%;
+    //     }
+    //     .add-gc{
+    //       @include items_btnBook($white-color);
+    //       border: 0;
+    //
+    //     }
+    //   }
+    // }
   }
 }

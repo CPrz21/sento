@@ -1,0 +1,75 @@
+#contactus{
+  background: $black_color;
+  @include sections(null, $black_color,100vh,null);
+  .row{
+    height: 100vh;
+    #map{
+      height: 20rem;
+      background: white;
+      margin-top: 10%;
+    }
+  }
+  .contact-container{
+    color: $white_color;
+    div{
+      flex-grow: 2;
+      flex-basis: 0;
+      padding: 2%;
+      p{
+        @include fontstyle($contactFont,2px,12px,$white_color);
+      }
+      .c-title{
+        margin: 0;
+      }
+      .c-sub{
+        color: $gray_color;
+      }
+    }
+    .c-address{
+
+    }
+    .c-reserva{
+      b{
+        color: $orange_color;
+      }
+      button{
+        background: transparent;
+        color: gray;
+        border: 1px solid;
+        @include fontstyle($contactFont,2px,12px,$gray_color);
+        padding: 2% 4%;
+      }
+    }
+    .c-news{
+      .input-group{
+        padding: 0;
+        input,button{
+          border-radius: 0;
+        }
+        input{
+          @include fontstyle(SegoeUIRegular,null,12px,$gray_color);
+          background: hsla(0, 0%,95%, 0.1);
+          border-color: transparent;
+          &:focus{
+            border-color: $orange_color;
+            box-shadow: none;
+            -webkit-box-shadow: none;
+            outline: -webkit-focus-ring-color auto 5px;
+          }
+        }
+        button{
+          border-color: $orange_color;
+          background-color: $orange_color;
+        }
+      }
+    }
+    .c-connect{
+      flex-grow: 1;
+      i{
+        border: 1px solid;
+        padding: 4% 8%;
+        margin: 0 2%;
+      }
+    }
+  }
+}

@@ -5,8 +5,9 @@
   height: $height;
   overflow: $overflow;
 }
-@mixin items_btnBook($color:$white_color,$margin: 0,$bg: $orange_color,$padding: 0.7rem 1rem) {
+@mixin items_btnBook($color:$white_color,$space:null,$margin: 0,$bg: $orange_color,$padding: 0.7rem 1rem) {
   color:$color;
+  letter-spacing: $space;
   margin: $margin;
   background: $bg;
   padding: $padding;

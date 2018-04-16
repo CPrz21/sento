@@ -1,0 +1,27 @@
+// =============================================================================
+// MIXINS FOR CUSTOM SELECTS (SPECIAL GIFTS)
+// =============================================================================
+@mixin custom-select() {
+  .body-container{
+    width:100%;
+    border:1.5px solid $black_color;
+    cursor:pointer;
+    background: $white-color
+  }
+  .option-container{
+    margin:0px;
+    width:100%;
+    padding:0px;
+
+    li{
+      list-style: none;
+      border-top: 1.5px solid $black_color;
+      padding: 0.5rem;
+      label{
+        margin: 0;
+      }
+    }
+  }
+}
+
+// =============================================================================

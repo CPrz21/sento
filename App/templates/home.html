@@ -191,7 +191,45 @@
   <section id="gallery" style="height:100vh; background-color:gray;">
 
   </section>
-  <section id="contactus" style="height:100vh; background-color:gray;">
+  <section ng-controller="contactusCtrl" id="contactus">
+    <div class="container">
+      <div class="row d-flex align-items-top">
+        <div id="map" class="col-md-12">
+
+        </div>
+        <div class="col-md-12 d-flex contact-container">
+          <div class="c-address">
+            <p>SENTO ADDRESS</p>
+            <p class="c-sub">COLONIA ESCALON 3A CALLE PONIENTE #4817 SAN SALVADOR, EL SALVADOR</p>
+          </div>
+          <div class="c-reserva">
+            <p class="c-title">RESERVATIONS</p>
+            <p class="c-sub">T. <b>(503) 2266 1000</b>
+            <br>W. <b>(503) 7729 5874</b></p>
+            <p>QUESTION? COMMENTS?</p>
+            <button type="button">SEND COMMENTS</button>
+          </div>
+          <div class="c-news">
+            <p class="c-title">NEWSLETTER SIGN UP</p>
+            <p class="c-sub">SIGN UP FOR SPECIAL OFFERS</p>
+
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="enter your email">
+              <span class="input-group-btn">
+                <button class="btn btn-secondary" type="button"><i class="icon ion-ios-arrow-thin-right"></i></button>
+              </span>
+            </div>
+
+          </div>
+          <div class="c-connect">
+            <p>CONNECT WITH US</p>
+            <i class="icon ion-social-facebook"></i>
+            <i class="icon ion-social-instagram-outline"></i>
+            <i class="icon ion-social-twitter"></i>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </section>
 </div>

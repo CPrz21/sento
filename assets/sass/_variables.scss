@@ -8,13 +8,18 @@
 
 //COLORES
 $black_color:hsl(0, 0%, 0%);
+$blackWopacity_color:hsla(0, 0%, 0%,0.7);
 $white_color:hsl(0, 0%, 100%);
 $whiteWopacity_color:hsla(0, 0%,95%, 0.7);
 $orange_color:hsl(31, 37%, 52%);
+$gray_color:hsl(0, 0%, 46%);
 
 //------------------------------------
 //FUENTES DE WEBSITE SENTO
 //------------------------------------
+//FUENTES NAVBAR
+$navFont:SegoeUISemiboldRegular;
+
 //FUENTES DE ITEMS (HER_OPTNS, HIM_OPTNS, SPA_OPTNS)
 $h1_font:SegoeUILightRegular;/* H1 de titulos (MAIN, HER, HIM, SPA) */
 $h6_font:SegoeUISemiboldRegular;/* H6 de subtitulo (MAIN) */
@@ -29,7 +34,10 @@ $msg-itemFont:SegoeUILightRegular;/*font de mensaje a la par de btn book xperien
 
 //FUENTES PARA SECCION SPECIAL GIFTS
 $head-giftLFont:SegoeUILightRegular;
+$Terms-sgFont:SegoeUIRegular;
 
+//FUENTES PARA CONTACT US
+$contactFont:SegoeUILightRegular;
 //------------------------------------
 
 //URL BACKGROUNDS DE SECCIONES

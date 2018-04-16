@@ -1,0 +1,15 @@
+
+<div class="select-drop-down body-container" ng-click="toggleOptions()">
+  <div class="w-100" style="display: flex;align-items: center;justify-content: space-between;padding: 0.5rem;">
+    <label style="margin:0px;">{{selectedName}}</label>
+    <i style="color:#b28657;" class="icon ion-arrow-down-b"></i>
+  </div>
+  <ul ng-show="showOptions" class="option-container">
+    <li ng-repeat="option in selectOptions" ng-click="selectOption(option)">
+      <label>{{option}}</label>
+    </li>
+  </ul>
+</div>
+
+<!-- <select-drop-down select-options="countryList" selected-name="selectedName">
+</select-drop-down> -->

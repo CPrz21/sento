@@ -1,3 +1,62 @@
-nav{
-  height: 4rem;
+#sento-nav{
+  background: $white_color;
+  #sento-nav-menu{
+    height: 4rem;
+    align-items: center;
+    padding: 0 1%;
+    justify-content: space-around;
+    @include fontstyle($navFont,null,14px);
+    border-top: 1px solid $gray_color;
+    border-bottom: 1px solid $gray_color;
+    .nav-divs{
+      height: 100%;
+      flex-grow: 1;
+      align-items: center;
+      justify-content: space-around;
+      &:nth-child(1){
+        flex-grow: 3;
+      }
+      &:nth-child(2){
+        justify-content: end;
+        i,button{
+          display: flex;
+          align-items: center;
+        }
+        i{
+          font-size: 1.5rem;
+        }
+        button{
+          background: transparent;
+          border: 1px solid black;
+          @include fontstyle(SegoeUIRegular,null,10px);
+          font-weight: bold;
+          padding: 0 5%;
+          &:nth-child(4){
+            background-color: $orange_color;
+            color: $white_color;
+            border: none;
+          }
+        }
+      }
+    }
+    .nav-opt{
+      flex-grow: 1;
+      justify-content: center;
+      &:nth-child(1){
+        flex-grow: 3;
+      }
+    }
+    span{
+      display: flex;
+      justify-content: space-around!important;
+    }
+    a{
+      display: flex;
+      color: black;
+    }
+
+  }
+  #sento-nav-submenu{
+    height: 4rem;
+  }
 }

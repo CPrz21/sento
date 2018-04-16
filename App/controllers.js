@@ -1,6 +1,15 @@
-app.controller('MainController', function($scope,$http,$resource,PostResource,$document) {
+app.controller('NavBarController',function($scope){
+  $scope.ShowNav= function(){
+
+    $("#sento-nav-submenu").slideToggle("slow");
+  }
+})
+.controller('MainController', function($scope,$http,$resource,PostResource,$document) {
   $scope.url=base_url;
+  $scope.urlAssets=urlAssets;
   $scope.urlTemplates=urlTemplates;
+  $scope.countryList = ["India", "America", "china", "ElSalvador"];
+  $scope.selectedName="otro";
   $scope.isNavCollapsed = true;
   $scope.isCollapsed = false;
   $scope.isCollapsedHorizontal = false;
@@ -10,11 +19,29 @@ app.controller('MainController', function($scope,$http,$resource,PostResource,$d
     });
   }
 
+  $scope.ShowNav= function(){
+    $("#sento-nav-submenu").slideToggle("slow");
+  }
+
 
 }).value('duScrollOffset', 0)
 .controller('DropdownController', DropdownController)
 .controller('tabsSwipeCtrl', tabsSwipeCtrlFn)
+.controller('contactusCtrl', function($scope){
+  var myLatLng = {lat: 13.704951, lng: -89.244222};
 
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: myLatLng
+        });
+
+
+        var marker = new google.maps.Marker({
+                  position: myLatLng,
+                  map: map,
+                  title: 'Hello World!'
+        });
+})
 // .controller("MainController",function($scope,$resource,PostResource){
 //   User = $resource("http://jsonplaceholder.typicode.com/users/:id", {id:"@id"});
 //
