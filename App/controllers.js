@@ -1,7 +1,32 @@
 app.controller('NavBarController',function($scope){
-  $scope.ShowNav= function(){
+  $scope.himM = false;
+  $scope.herM = false;
+  $scope.ShowNav= function(option){
+    // if(option=="her"){
+    //   if($scope.herM==true){
+    //     if($( "#sento-nav-submenu" ).is( ":visible" )){
+    //       $("#sento-nav-submenu").slideToggle("slow");
+    //     }
+    //   }else{
+    //     if($( "#sento-nav-submenu" ).is( ":hidden" )){
+    //       $scope.herM = $scope.herM ? false : true;
+    //       $("#sento-nav-submenu").slideToggle("slow");
+    //     }
+    //   }
+    //
+    // }else if(option=="him"){
+    //   if($scope.himM==true){
+    //     if($( "#sento-nav-submenu" ).is( ":visible" )){
+    //       $("#sento-nav-submenu").slideToggle("slow");
+    //     }
+    //   }else{
+    //     if($( "#sento-nav-submenu" ).is( ":hidden" )){
+    //       $scope.himM = $scope.himM ? false : true;
+    //       $("#sento-nav-submenu").slideToggle("slow");
+    //     }
+    //   }
+    // }
 
-    $("#sento-nav-submenu").slideToggle("slow");
   }
 })
 .controller('MainController', function($scope,$http,$resource,PostResource,$document) {
@@ -24,7 +49,7 @@ app.controller('NavBarController',function($scope){
   }
 
 
-}).value('duScrollOffset', 0)
+}).value('duScrollOffset', 0).value('duScrollDuration', 1500)
 .controller('DropdownController', DropdownController)
 .controller('tabsSwipeCtrl', tabsSwipeCtrlFn)
 .controller('contactusCtrl', function($scope){

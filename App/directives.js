@@ -17,3 +17,18 @@ app.directive('selectDropDown',function($document){
     }
   }
 })
+.directive("scroll", function ($window) {
+    return function(scope, element, attrs) {
+
+        angular.element($window).bind("scroll", function() {
+            if (this.pageYOffset >= 100) {
+                 scope.navOnBottom=true;
+                 console.log('Scrolled below header.');
+             } else {
+                 scope.navOnBottom=false;
+                 console.log('Header is in view.');
+             }
+            scope.$apply();
+        });
+    };
+});
