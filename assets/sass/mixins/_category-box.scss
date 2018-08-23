@@ -1,7 +1,7 @@
 // =============================================================================
 // MIXINS FOR CATEGORIE BOX (HER,HIM,SPA)
 // =============================================================================
-@mixin category_box($txtalign: center,$bg:$whiteWopacity_color,$color: $black_color,$padding: 2rem 4rem) {
+@mixin category_box($txtalign: center,$padding: 2rem 4rem,$bg:$whiteWopacity_color,$color: $black_color) {
   text-align: $txtalign;
   background-color: $bg;
   color: $color;

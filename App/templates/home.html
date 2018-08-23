@@ -1,29 +1,32 @@
 <div class="col-12 pr-0 pl-0">
   <!-- MAIN SECTION -->
-  <section id="main">
+  <section id="{{mainSection.url_en}}">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="col-md-5">
           </div>
-          <h1>A SENTO EXPERIENCE FOR YOU</h1>
+          <h1>{{mainSection.texto_1}}</h1>
           <div class="col-md-6">
-            <h6>BOOK NOW A RELAX SESSION AT SENTO</h6>
+            <h6>{{mainSection.texto_2}}</h6>
           </div>
+          <!-- <select ng-model="selectedlanguage" ng-options="x for x in languages">
+</select> -->
         </div>
       </div>
     </div>
   </section>
   <!-- HER SECTION -->
-  <section id="her">
+  <section id="{{herSection.url_en}}">
+    <div class="s-down bounce">
+      <img ng-src="{{url}}assets/Images/scrolldown_arrow_preview.png">
+      <p>scroll down</p>
+    </div>
     <div class="container">
       <div class="row">
         <div class="col-md-5">
-          <h1>STYLING HER</h1>
-          <p>Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-            d est laborum.</p>
+          <h1>{{herSection.texto_1}}</h1>
+          <p>{{herSection.texto_2}}</p>
         </div>
       </div>
     </div>
@@ -32,22 +35,30 @@
   <section id="her_optns">
     <div class="container">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-2">
           <p>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STYLING HER</p>
           <p>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HANDS & FOOT</p>
           <p>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COLOR</p>
           <p>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NAILS</p>
           <p>&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WAXING</p>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-9">
           <div class="row pb-5" ng-repeat="n in [] | range:5">
             <div class="col-md-12 d-flex align-items-center head-item">
               <h3 class="pr-5">Bridal Make Up</h3>
               <h3 class="pl-5">US$20</h3>
+              <div class="price-offer">
+                <div>
+                <p>10%OFF</p>
+                <p>US$18</p>
+                </div>
+              </div>
+              <!-- <h3 class="pr-5">Bridal Make Up</h3>
+              <h3 class="pl-5">US$20</h3>
               <div style="display: flex;margin: 0 0 0 8%;border: 1px solid;">
                 <p style="margin: 0;border-right: 1px solid;padding: 0 10%;">10%OFF</p>
                 <p style="/*! margin: 0; *//*! padding: 0 10%; */">US$18</p>
-              </div>
+              </div> -->
             </div>
             <div class="col-md-12 info-item">
               <p>This is a face & Body package. Efoliation and modeling techniques are performed with tehe use of
@@ -66,15 +77,12 @@
     </div>
   </section>
   <!-- HIM SECTION -->
-  <section id="him">
+  <section id="{{himSection.url_en}}">
     <div class="container">
       <div class="row">
         <div class="col-md-5">
-          <h1>STYLING HIM</h1>
-          <p>Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-            d est laborum.</p>
+          <h1>{{himSection.texto_1}}</h1>
+          <p>{{himSection.texto_2}}</p>
         </div>
       </div>
     </div>
@@ -191,6 +199,7 @@
   <section id="gallery" style="height:100vh; background-color:gray;">
 
   </section>
+  <!-- CONTACT US SECTION -->
   <section ng-controller="contactusCtrl" id="contactus">
     <div class="container">
       <div class="row d-flex align-items-top">

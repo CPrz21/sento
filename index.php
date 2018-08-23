@@ -55,6 +55,9 @@
  */
 	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
 
+// The physical path to the "assets" folder
+	define('ASSETS_PATH', dirname(__FILE__) . '/assets');
+
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING

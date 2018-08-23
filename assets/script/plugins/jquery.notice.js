@@ -13,7 +13,7 @@
 				stayTime: 			5000,				// time in miliseconds before the item has to disappear
 				text: 				'',					// content of the item
 				stay: 				false,				// should the notice item stay or not?
-				type: 				'' 			// could also be error, success
+				type: 				'' 					// could also be error, success
 			}
 			
 			// declare varaibles

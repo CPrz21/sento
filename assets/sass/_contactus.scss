@@ -3,32 +3,57 @@
   @include sections(null, $black_color,100vh,null);
   .row{
     height: 100vh;
+    @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+      height: auto;
+    }
     #map{
       height: 20rem;
       background: white;
       margin-top: 10%;
+      @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+        height: 10rem;
+        margin-top: 70px;
+      }
     }
   }
   .contact-container{
     color: $white_color;
+    @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+      flex-wrap: wrap;
+      padding-top: 2rem;
+    }
     div{
       flex-grow: 2;
       flex-basis: 0;
       padding: 2%;
       p{
         @include fontstyle($contactFont,2px,12px,$white_color);
+        @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+          font-size: 10px;
+        }
       }
       .c-title{
         margin: 0;
+        @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+          font-size: 10px;
+        }
       }
       .c-sub{
         color: $gray_color;
+        @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+          font-size: 10px;
+        }
       }
     }
     .c-address{
-
+      @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+        flex-basis: 50%;
+      }
     }
     .c-reserva{
+      @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+        flex-basis: 50%;
+      }
       b{
         color: $orange_color;
       }
@@ -41,8 +66,17 @@
       }
     }
     .c-news{
+      @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+        flex-basis: 100%;
+        text-align: center;
+        margin-top: 1rem;
+      }
       .input-group{
         padding: 0;
+        @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+          width: 80%;
+          margin: 0 auto;
+        }
         input,button{
           border-radius: 0;
         }
@@ -65,10 +99,24 @@
     }
     .c-connect{
       flex-grow: 1;
-      i{
+      @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+        flex-basis: 100%;
+        text-align: center;
+        p{
+          margin-bottom: 0.5rem;
+        }
+      }
+      a{
+        color: $white_color;
         border: 1px solid;
         padding: 4% 8%;
         margin: 0 2%;
+        @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+          border: 0px;
+          padding: 0px;
+          margin: 0 1%;
+          font-size: 25px;
+        }
       }
     }
   }

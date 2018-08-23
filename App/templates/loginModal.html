@@ -1,0 +1,69 @@
+<div class="container-fluid px-0 py-4" ng-show="!forgotVal && !createVal">
+  <div class="row login-form mx-2 mt-3">
+    <div class="col-7 mx-auto mt-3">
+      <h2 class="text-center snto-title">LOGIN</h2>
+      <form ng-submit="" class="mb-3">
+        <div class="form-group">
+          <input type="email" class="form-control sento-input" id="usr" placeholder="email*">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control sento-input" id="pwd" placeholder="password*">
+        </div>
+        <button type="button" class="btn snto-btn-orange btn-lg btn-block">LOGIN</button>
+        <p class="text-center">Or sign it with:</p>
+        <div class="w-100 text-center">
+          <a class="icon ion-social-facebook bg-snto-orange text-white col py-2 px-3" href="#"></a>
+          <a class="icon ion-social-googleplus-outline bg-snto-orange text-white col py-2" href="#"></a>
+        </div>
+      </form>
+    </div>
+    <div class="w-100 d-flex">
+      <p class="w-50 text-center mb-1 color-snto-orange c-pointer" ng-click="createVal = !createVal">OR CREATE ACCOUNT</p>
+      <p class="w-50 text-center mb-1 c-pointer" ng-click="forgotVal = !forgotVal">FORGOT PASSWORD?</p>
+    </div>
+  </div>
+  <img alt="" ng-src="{{url}}assets/Images/sento_small.png" style="width: 120px;">
+</div>
+
+<div class="container-fluid px-0 py-4" ng-show="forgotVal">
+  <div class="row login-form mx-2 mt-3">
+    <div class="col-10 mx-auto mt-4">
+      <h2 class="text-center snto-title">LOST PASSWORD</h2>
+      <form ng-submit="" class="mb-3 text-center">
+        <div class="form-group">
+          <input type="email" class="form-control sento-input text-center" id="f-mail" placeholder="email address">
+        </div>
+        <p class="text-center my-5">
+          Lost your password? Please enter your email addres.
+          You will receive a link to create a new password via email.
+        </p>
+        <button type="button" class="btn snto-btn-orange mb-4">RESET PASSWORD</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid px-0 py-4" ng-show="createVal">
+  <div class="row login-form mx-2 mt-3">
+    <div class="col-12 mx-auto mt-4 p-0">
+      <h2 class="text-center snto-title">WELCOME</h2>
+      <form ng-submit="" class="mb-3 text-center">
+        <div class="col-12 d-flex flex-wrap p-0 mb-4">
+          <div class="form-group col-6 pl-0 pr-1">
+            <input type="text" class="form-control sento-input" id="first-name" placeholder="First Name">
+          </div>
+          <div class="form-group col-6 pr-0 pl-1">
+            <input type="text" class="form-control sento-input" id="last-name" placeholder="Last Name">
+          </div>
+          <div class="form-group col-6 pl-0 pr-1">
+            <input type="email" class="form-control sento-input" id="user-email" placeholder="Email">
+          </div>
+          <div class="form-group col-6 pr-0 pl-1">
+            <input type="password" class="form-control sento-input" id="user-pass" placeholder="Password">
+          </div>
+        </div>
+        <button type="button" class="btn snto-btn-orange mb-4 col-6">REGISTER</button>
+      </form>
+    </div>
+  </div>
+</div>

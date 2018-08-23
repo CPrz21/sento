@@ -1,6 +1,409 @@
 .c-pointer{
   cursor: pointer;
 }
+.bg-snto-orange{
+  background-color: $orange_color;
+}
+.color-snto-orange{
+  color: $orange_color;
+}
+.snto-btn-orange{
+  background-color: $orange_color;
+  border-radius: 0!important;
+  color:$white_color;
+  font-family: $SegoeUIRegular;
+  font-size: 15px!important;
+  letter-spacing: 1px;
+
+}
 .w-border-radius{
   border-radius: 0;
+}
+.s-down{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img{
+    width: 1%;
+    margin-right: 1%;
+    @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+      width: 4%;
+    }
+  }
+  p{
+    margin-top: 1%;
+    font-family: SegoeUISemiboldItalic;
+    color: $black_color;
+    @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+      margin: 0 0 1% 2%;
+    }
+  }
+}
+.snto-title{
+  font-family: $SegoeUIlight;
+  margin-bottom: 2rem;
+  letter-spacing: 5px;
+  font-size: 30px;
+  position: relative;
+}
+.snto-text{
+  font-family: $SegoeUIRegular;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+.snto-border-container{
+  border-top: 1px solid $orange_color !important;
+  border-bottom: 1px solid $orange_color !important;
+}
+.s-title{
+  font-family: $SegoeUIlight;
+  margin-bottom: 2rem;
+  letter-spacing: 5px;
+  font-size: 30px;
+  position: relative;
+  &:after{
+    background-color: $orange_color;
+    bottom: -1rem;
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 4.5rem;
+    @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+      left:36%;
+    }
+  }
+}
+.s-text{
+  font-family: $SegoeUIRegular;
+  margin-bottom: 4rem;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+.sento-form-btns{
+  border: 1.5px solid black;
+  padding: 0.5rem 0.8rem;
+  margin: 0 5px 0 0;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 0px;
+  background-color: transparent;
+  cursor: pointer;
+  span{
+    color:$gray_color;
+    font-family: $SegoeUIlight;
+    letter-spacing: 1px;
+  }
+  @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+    padding: 0.4rem 0.5rem;
+  }
+}
+//#LOAD DIV
+#load{
+    background-color: white;
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      -webkit-transition:all linear 0.5s;
+      -o-transition: all linear 0.5s;
+      transition:all linear 0.5s;
+      z-index: 10000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+#load.ng-hide {
+  opacity:0;
+  /* transform: scale(0.8); */
+}
+
+//BOUNCE EFFECT FOR LOAFING MORE
+@-moz-keyframes bounce {
+0%, 20%, 50%, 80%, 100% {
+  -moz-transform: translateY(0);
+  transform: translateY(0);
+}
+40% {
+  -moz-transform: translateY(-15px);
+  transform: translateY(-15px);
+}
+60% {
+  -moz-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+}
+@-webkit-keyframes bounce {
+0%, 20%, 50%, 80%, 100% {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+40% {
+  -webkit-transform: translateY(-15px);
+  transform: translateY(-15px);
+}
+60% {
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+}
+@keyframes bounce {
+0%, 20%, 50%, 80%, 100% {
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+40% {
+  -moz-transform: translateY(-15px);
+  -ms-transform: translateY(-15px);
+  -webkit-transform: translateY(-15px);
+  transform: translateY(-15px);
+}
+60% {
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+}
+.bounce {
+-moz-animation: bounce 2s infinite;
+-webkit-animation: bounce 2s infinite;
+animation: bounce 2s infinite;
+}
+
+//DROPDOWN DE IDIOMAS VISTA COMPU
+.wrap-dd-select{
+  position: absolute;
+  font-size: 14px;
+  padding: 0.4% 1%;
+  top: 20px;
+  right: 20px;
+  width: 5%;
+  border: 1px solid black;
+  border-radius: 0px;
+  background-color: transparent;
+  color: $black_color;
+  &:after{
+    border-color: $black_color transparent;
+  }
+  ul{
+    border: 2px solid black;
+    li{
+      padding: 0;
+      // &:nth-child(1){
+      //   border-bottom: 2px solid $black_color;
+      // }
+      a{
+        color: $black_color;
+      }
+    }
+  }
+}
+//SIDEBARJS WHITE BACKDROP
+.nl-clss{
+  [sidebarjs-container]{
+    background-color: rgba(255, 255, 255, .5);
+    border:0;
+  }
+}
+//SIDEBARJS STYLE FOR SHOPPING BAG
+[sidebarjs]{
+  z-index: 1100;
+  transition: transform 2s ease,-webkit-transform 2s ease;
+}
+[sidebarjs-container]{
+  width: 100%;
+  max-width: 100%;
+  transition: -webkit-transform 2s ease;
+  transition: transform 2s ease;
+  transition: transform 2s ease,-webkit-transform 2s ease;
+  background-color: rgba(0, 0, 0, .5);
+  align-items: flex-end;
+  border:2px solid black;
+}
+
+
+#shop-container{
+  width: 25%;
+  @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+    width: 100%;
+  }
+  .container{
+    height: 100vh;
+    .row{
+      font-family: $SegoeUIbold;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 0 15px 0 15px;
+      &:nth-child(1){
+        .col-md-12{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding:0px;
+          p{
+            margin: 0;
+          }
+          i{
+            font-size: 35px;
+            cursor: pointer;
+          }
+        }
+      }
+      &:nth-child(2){
+        .w-100{
+          border-top:1px solid $orange_color;
+          border-bottom: 1px solid $orange_color;
+          height: 65vh;
+          overflow: auto;
+          .col-md-12{
+            display: flex;
+            align-items: center;
+            letter-spacing: 1px;
+            margin: 5% 0% 10% 0%;
+            div{
+              &:nth-child(1){
+                margin-right: 10%;
+                i{
+                  font-size: 25px;
+                }
+              }
+              &:nth-child(2){
+                flex-grow: 1;
+                p{
+                  margin: 0;
+                  &:nth-child(2){
+                      font-family: $SegoeUIlight;
+                      b{
+                        font-family: $SegoeUIbold;
+                        font-weight: bold;
+                        margin-right: 12%;
+                      }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(3){
+        .col-md-12{
+          padding: 5% 0px;
+          letter-spacing: 1px;
+          border-bottom: 1px solid $orange_color;
+          p{
+            font-family: $SegoeUIlight;
+            font-size: 16px;
+            margin: 0px;
+            b{
+              font-family: $SegoeUIbold;
+              font-weight: bold;
+              font-size: 14px;
+              margin-right: 15%;
+            }
+          }
+        }
+      }
+      &:nth-child(4){
+        .col-md-12{
+          padding: 0px;
+          p{
+            text-align: center;
+            padding: 0px;
+            &:nth-child(1){
+              background-color: $orange_color;
+              margin: 8% 0% 2% 0%;
+              padding: 2.5% 0%;
+              letter-spacing: 1px;
+              color: $white_color;
+            }
+            &:nth-child(2){
+              font-family: $SegoeUIlight;
+              margin: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.sg-nav{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $black_color;
+  top: 70px;
+  width: 100%;
+  left: 0;
+  height: 2rem;
+  .sg-nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    a{
+      font-family: $SegoeUIlight;
+      font-weight: bold;
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: $white_color;
+      text-decoration: none;
+      &:before{
+        content: '>';
+        margin-right: 5px;
+      }
+      @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+.sento-btns{
+  font-family: $SegoeUIRegular;
+  font-size: 12px!important;
+  background-color: $orange_color;
+  color: white;
+  padding: 0.5rem 1rem!important;
+  border-radius: 0!important;
+  @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+    font-size: 10px!important;
+  }
+}
+.msgBook{
+  @include fontstyle($msg-itemFont,1px,14px);
+  @include items_msgBook();
+  @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+    font-size: 11px;
+    text-align: center;
+  }
+}
+.login-form{
+  border-top: 1px solid $orange_color !important;
+  border-bottom: 1px solid $orange_color !important;
+  p{
+    font-family: $SegoeUIbold;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+}
+//Form inputs
+.sento-input{
+  border-radius: 0 !important;
+  border-color: black !important;
+  border-width: 1.4px !important;
+  font-size: 12px !important;
+  color: gray !important;
+}
+
+.popeye-modal-container{
+  background-color: rgba(255,255,255,.7);
+}
+.popeye-md-modal{
+  width: 28rem!important;
 }

@@ -1,16 +1,33 @@
-#her{
+#Her{
   @include sections($bg_HerSection);
+  position: relative;
+  @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+    background-position: 40%;
+  }
 
   .row{
     @include row_sections(right);
+    @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+      justify-content: center;
+    }
     .col-md-5{
-      @include category_box();
+      @include category_box(center,2% 3%);
+      max-width: 38%;
+      @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+        max-width: 90%;
+        margin-top: 70%;
+      }
       h1{
         @include fontstyle($h1_font,0.6rem,null);
         @include category_box_content();
+        @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+          font-size: 28px;
+        }
       }
       p{
         @include fontstyle($p_font,null,14px);
+        padding: 0 5%;
+        margin: 0px;
       }
     }
   }

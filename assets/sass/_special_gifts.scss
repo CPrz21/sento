@@ -1,228 +1,462 @@
-.ngIncludeItem {
-    top: 35px;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    animation-duration: 0.30s;
-    animation-timing-function: ease-in-out;
-    -webkit-animation-duration: 0.30s;
-    -webkit-animation-timing-function: ease-in-out;
-}
-
-.page {
-    position: inherit;
-    top: 0;
-    right: inherit;
-    bottom: inherit;
-    left: inherit;
-}
-
-.firstPage {
-    background-color: blue;
-}
-
-.secondPage {
-    background-color: red;
-}
-
-.thirdPage {
-    background-color: green;
-}
-
-/* When the page enters, slide it from the right */
-.ngIncludeItem.ng-enter {
-    animation-name: slideFromRight;
-    -webkit-animation-name: slideFromRight;
-}
-/* When the page enters and moveToLeft is true, slide it from the left(out of the user view) to the right (left corner) */
-.ngIncludeItem.moveToLeft.ng-enter {
-    animation-name: slideFromLeft;
-    -webkit-animation-name: slideFromLeft;
-}
-/* When the page leaves, slide it to left(out of the user view) from the left corner,
-    in other words slide it from the left(out of the view) to the left corner but in reverse order */
-.ngIncludeItem.ng-leave {
-    animation-name: slideFromLeft;
-    animation-direction: reverse;
-    -webkit-animation-name: slideFromLeft;
-    -webkit-animation-direction: reverse;
-}
-/* When the page leaves, slide it to the right(out of the user view) from the the left corner,
-    in other words, slide it from the right but in reverse order  */
-.ngIncludeItem.moveToLeft.ng-leave {
-    animation-name: slideFromRight;
-    animation-direction: reverse;
-    -webkit-animation-name: slideFromRight;
-    -webkit-animation-direction: reverse;
-}
-
-@keyframes slideFromRight {
-    0% {
-        transform: translateX(100%);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideFromLeft {
-    0% {
-        transform: translateX(-100%);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@-webkit-keyframes slideFromRight {
-    0% {
-        -webkit-transform: translateX(100%);
-    }
-
-    100% {
-        -webkit-transform: translateX(0);
-    }
-}
-
-@-webkit-keyframes slideFromLeft {
-    0% {
-        -webkit-transform: translateX(-100%);
-    }
-
-    100% {
-        -webkit-transform: translateX(0);
-    }
-}
-#special_gifts{
-  @include sections(null,$black_color);
-  .l-sg{
-    height:100vh;
-    padding:0 0 0 10%;
-
-    h3{
-      margin: 0;
-      @include fontstyle($head-giftLFont,5px,null);
-    }
-    div{
-      border-bottom: 1px solid $orange_color;
-      width: 4rem;
-      margin: 2% 0;
-    }
-    p{
-      @include fontstyle($info-itemFont,1px,14px);
-    }
+.sg-container{
+  display: flex;
+  @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+    flex-direction: column;
+    padding: 0!important;
   }
-  .r-sg{
-    @include custom-select();
-    h6{
-      @include fontstyle($sidemenu-itemFont,5px,16px);
-    }
-    form{
-      @include fontstyle($sidemenu-itemFont,null,12px);
-      .form-divs{
-        display: flex;
-        align-items: center;
-        padding: 1% 0;
-        .lbl-divs{
-          display: inline-flex;
-          flex-basis:15%;
-          label{
-            margin: 0;
-          }
-        }
-        .lbl-optns-divs{
-          display: inline-flex;
-          flex-basis:85%;
-          p{
-            cursor: pointer;
-            margin: 0 2% 0 0;
-            padding: 1% 2%;
-            border: 1px solid;
-          }
-          label{
-            font-family: SegoeUIRegular;
-            color: red;
-            letter-spacing: 1px;
-            font-size: 10px;
-          }
-        }
-        .lbl-optns-inpt{
-          display: inline-flex;
-          flex-basis:50%;
-          input,textarea{
-            width: 100%;
-            font-family: SegoeUIRegular;
-            font-size: 10px;
-            text-transform: lowercase;
-            border: 1px solid black;
-            padding: 2%;
+  .sg-right, .sg-left{
+    height: 100%;
+  }
+  .sg-right{
+    display: flex;
+    align-items: center;
+    .sg-text{
+      margin-top: 4rem;
+      @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+        text-align: center;
+        margin-top: 8rem;
+      }
+      h1{
+        font-family: $SegoeUIlight;
+        margin-bottom: 2rem;
+        letter-spacing: 5px;
+        font-size: 30px;
+        position: relative;
+        &:after{
+          background-color: $orange_color;
+          bottom: -1rem;
+          content: '';
+          height: 1px;
+          left: 0;
+          position: absolute;
+          width: 4.5rem;
+          @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+            left:36%;
           }
         }
       }
-      .line-bottom-sg{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 3% 0;
-        border-top: 1px solid $orange_color;
-        width: 65%;
-        margin: 5% 0;
-        .add-gc{
-          @include items_btnBook($white-color,1px);
-          border: 0;
+      p{
+        font-family: $SegoeUIRegular;
+        margin-bottom: 4rem;
+        letter-spacing: 1px;
+        font-size: 14px;
+      }
+      img{
+        width: 20rem;
+        @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+          width: 100%;
         }
-        p{
-          color:$orange_color;
-          border: 0;
-          margin: 0 0 0 0;
-          padding: 0;
+      }
+    }
+  }
+  .sg-left{
+    display: flex;
+    align-items: center;
+    .sg-form{
+      width: 100%;
+      margin-top: 7rem;
+      @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+        margin-top: 2rem;
+      }
+      .sg-form-title{
+        font-family: $SegoeUIbold;
+        letter-spacing: 5px;
+        margin-bottom: 1rem;
+        font-size: 16px;
+        @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+          text-align: center;
         }
-        .terms-p{
-          @include fontstyle($Terms-sgFont,null,12px);
-          padding-top: 5%;
-          b{
+      }
+      p{
+        font-family: $SegoeUIbold;
+        font-size: 14px;
+      }
+      .sg-form-row{
+        margin-bottom: 1rem;
+        @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+          &:nth-child(2){
+            flex-direction: column;
+          }
+        }
+        .sg-list-steps{
+          font-family: $SegoeUIRegular;
+          font-size: 14px;
+          letter-spacing: 1px;
+          span{
             color: $orange_color;
           }
         }
+        .ion-plus-round{
+          color: $orange_color;
+        }
+        .sg-add-service{
+          font-family: $SegoeUIRegular;
+          font-size: 14px;
+          letter-spacing: 1px;
+          margin: 0 1rem;
+        }
+        .col-md-2{
+          align-items: center;
+          @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+            flex-basis: 25%;
+          }
+          p{
+            margin: 0;
+            font-size: 12px;
+            font-weight: bold;
+          }
+        }
+        .sg-form-delivery-title{
+          @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+            flex-basis: 20%!important;
+          }
+        }
+        .sg-form-delivery-btns{
+          @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+            flex-basis: 80%!important;
+          }
+        }
+        .col-md-10{
+          @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+            flex-basis: 75%;
+          }
+          .sento-form-btns{
+            &:nth-child(5){
+              color: $gray_color;
+            }
+          }
+        }
+        .sg-form-input{
+          border-radius: 0;
+          border-color: black;
+          border-width: 1.5px;
+          font-size: 12px;
+          color: gray;
+        }
+      }
+      .sg-row-warning{
+        font-family: $SegoeUIlight;
+        font-size: 12px;
+        color: red;
+        letter-spacing: 2px;
+        margin:0 0 0.8rem 0;
       }
     }
-    // .col-md-12{
-    //   height:100vh;
-    //   .title-gcd{
-    //     @include fontstyle($sidemenu-itemFont,5px,16px);
-    //   }
-    //   form{
-    //     @include fontstyle($sidemenu-itemFont,null,12px);
-    //     label{
-    //       margin: 0;
-    //       width: 15%;
-    //     }
-    //     p{
-    //       cursor: pointer;
-    //       margin: 0 1%;
-    //       padding: 1% 2%;
-    //       border: 1px solid;
-    //     }
-    //     input{
-    //       margin: 0 1%;
-    //       width: 60%;
-    //       border: 1px solid black;
-    //       padding: 1%;
-    //     }
-    //     textarea{
-    //       margin: 0 1%;
-    //       width: 60%;
-    //       border: 1px solid black;
-    //       padding: 1%;
-    //     }
-    //     .add-gc{
-    //       @include items_btnBook($white-color);
-    //       border: 0;
-    //
-    //     }
-    //   }
-    // }
+    .sg-form-footer{
+      margin-top: 3.5rem;
+      position: relative;
+      @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+        padding: 0!important;
+      }
+      &:before{
+        background-color: $orange_color;
+        top: -1.5rem;
+        content: '';
+        height: 1px;
+        left: 0;
+        position: absolute;
+        width: 90%;
+        @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+          width: 100%;
+          height:2px;
+        }
+      }
+      p{
+        margin: 0;
+        color: $orange_color;
+        letter-spacing: 1px;
+      }
+      .col-md-12{
+        &:nth-child(2){
+          @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+            padding: 0!important;
+          }
+        }
+      }
+      .sg-form-terms{
+        color: black;
+        font-size: 12px;
+        @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+          font-size: 10px;
+        }
+        a{
+          color: $orange_color;
+
+        }
+      }
+    }
   }
 }
+
+#gift_card{
+  min-height: 100vh;
+  .container, .row{
+    min-height: 100vh;
+  }
+}
+#gift-certificates{
+  min-height: 100vh;
+  .container, .row{
+    min-height: 100vh;
+    .sg-container .sg-right .sg-text{
+      margin-top: 0;
+      margin-bottom: 3rem;
+    }
+  }
+}
+#member-card{
+  min-height: 100vh;
+  .container, .row{
+    min-height: 100vh;
+    .sg-container .sg-left .sg-form .sg-form-row .col-md-10 p{
+      span{
+        color:$gray_color;
+        font-family: $SegoeUIlight;
+        letter-spacing: 1px;
+      }
+    }
+    .sg-container .sg-left .sg-form .sg-form-row:nth-child(2){
+      @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+        flex-direction: row;
+        .col-md-2{
+          flex-basis: 20%;
+        }
+        .col-md-10{
+          flex-basis: 80%;
+          .sento-form-btns{
+            font-size: 9px;
+          }
+        }
+      }
+
+    }
+  }
+}
+// .ngIncludeItem {
+//     top: 35px;
+//     bottom: 0;
+//     right: 0;
+//     left: 0;
+//     animation-duration: 0.30s;
+//     animation-timing-function: ease-in-out;
+//     -webkit-animation-duration: 0.30s;
+//     -webkit-animation-timing-function: ease-in-out;
+// }
+//
+// .page {
+//     position: inherit;
+//     top: 0;
+//     right: inherit;
+//     bottom: inherit;
+//     left: inherit;
+// }
+//
+// .firstPage {
+//     background-color: blue;
+// }
+//
+// .secondPage {
+//     background-color: red;
+// }
+//
+// .thirdPage {
+//     background-color: green;
+// }
+//
+// /* When the page enters, slide it from the right */
+// .ngIncludeItem.ng-enter {
+//     animation-name: slideFromRight;
+//     -webkit-animation-name: slideFromRight;
+// }
+// /* When the page enters and moveToLeft is true, slide it from the left(out of the user view) to the right (left corner) */
+// .ngIncludeItem.moveToLeft.ng-enter {
+//     animation-name: slideFromLeft;
+//     -webkit-animation-name: slideFromLeft;
+// }
+// /* When the page leaves, slide it to left(out of the user view) from the left corner,
+//     in other words slide it from the left(out of the view) to the left corner but in reverse order */
+// .ngIncludeItem.ng-leave {
+//     animation-name: slideFromLeft;
+//     animation-direction: reverse;
+//     -webkit-animation-name: slideFromLeft;
+//     -webkit-animation-direction: reverse;
+// }
+// /* When the page leaves, slide it to the right(out of the user view) from the the left corner,
+//     in other words, slide it from the right but in reverse order  */
+// .ngIncludeItem.moveToLeft.ng-leave {
+//     animation-name: slideFromRight;
+//     animation-direction: reverse;
+//     -webkit-animation-name: slideFromRight;
+//     -webkit-animation-direction: reverse;
+// }
+//
+// @keyframes slideFromRight {
+//     0% {
+//         transform: translateX(100%);
+//     }
+//
+//     100% {
+//         transform: translateX(0);
+//     }
+// }
+//
+// @keyframes slideFromLeft {
+//     0% {
+//         transform: translateX(-100%);
+//     }
+//
+//     100% {
+//         transform: translateX(0);
+//     }
+// }
+//
+// @-webkit-keyframes slideFromRight {
+//     0% {
+//         -webkit-transform: translateX(100%);
+//     }
+//
+//     100% {
+//         -webkit-transform: translateX(0);
+//     }
+// }
+//
+// @-webkit-keyframes slideFromLeft {
+//     0% {
+//         -webkit-transform: translateX(-100%);
+//     }
+//
+//     100% {
+//         -webkit-transform: translateX(0);
+//     }
+// }
+// #special_gifts{
+//   @include sections(null,$black_color);
+//   .l-sg{
+//     height:100vh;
+//     padding:0 0 0 10%;
+//
+//     h3{
+//       margin: 0;
+//       @include fontstyle($head-giftLFont,5px,null);
+//     }
+//     div{
+//       border-bottom: 1px solid $orange_color;
+//       width: 4rem;
+//       margin: 2% 0;
+//     }
+//     p{
+//       @include fontstyle($info-itemFont,1px,14px);
+//     }
+//   }
+//   .r-sg{
+//     @include custom-select();
+//     h6{
+//       @include fontstyle($sidemenu-itemFont,5px,16px);
+//     }
+//     form{
+//       @include fontstyle($sidemenu-itemFont,null,12px);
+//       .form-divs{
+//         display: flex;
+//         align-items: center;
+//         padding: 1% 0;
+//         .lbl-divs{
+//           display: inline-flex;
+//           flex-basis:15%;
+//           label{
+//             margin: 0;
+//           }
+//         }
+//         .lbl-optns-divs{
+//           display: inline-flex;
+//           flex-basis:85%;
+//           p{
+//             cursor: pointer;
+//             margin: 0 2% 0 0;
+//             padding: 1% 2%;
+//             border: 1px solid;
+//           }
+//           label{
+//             font-family: SegoeUIRegular;
+//             color: red;
+//             letter-spacing: 1px;
+//             font-size: 10px;
+//           }
+//         }
+//         .lbl-optns-inpt{
+//           display: inline-flex;
+//           flex-basis:50%;
+//           input,textarea{
+//             width: 100%;
+//             font-family: SegoeUIRegular;
+//             font-size: 10px;
+//             text-transform: lowercase;
+//             border: 1px solid black;
+//             padding: 2%;
+//           }
+//         }
+//       }
+//       .line-bottom-sg{
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         padding: 3% 0;
+//         border-top: 1px solid $orange_color;
+//         width: 65%;
+//         margin: 5% 0;
+//         .add-gc{
+//           @include items_btnBook($white-color,1px);
+//           border: 0;
+//         }
+//         p{
+//           color:$orange_color;
+//           border: 0;
+//           margin: 0 0 0 0;
+//           padding: 0;
+//         }
+//         .terms-p{
+//           @include fontstyle($Terms-sgFont,null,12px);
+//           padding-top: 5%;
+//           b{
+//             color: $orange_color;
+//           }
+//         }
+//       }
+//     }
+//     // .col-md-12{
+//     //   height:100vh;
+//     //   .title-gcd{
+//     //     @include fontstyle($sidemenu-itemFont,5px,16px);
+//     //   }
+//     //   form{
+//     //     @include fontstyle($sidemenu-itemFont,null,12px);
+//     //     label{
+//     //       margin: 0;
+//     //       width: 15%;
+//     //     }
+//     //     p{
+//     //       cursor: pointer;
+//     //       margin: 0 1%;
+//     //       padding: 1% 2%;
+//     //       border: 1px solid;
+//     //     }
+//     //     input{
+//     //       margin: 0 1%;
+//     //       width: 60%;
+//     //       border: 1px solid black;
+//     //       padding: 1%;
+//     //     }
+//     //     textarea{
+//     //       margin: 0 1%;
+//     //       width: 60%;
+//     //       border: 1px solid black;
+//     //       padding: 1%;
+//     //     }
+//     //     .add-gc{
+//     //       @include items_btnBook($white-color);
+//     //       border: 0;
+//     //
+//     //     }
+//     //   }
+//     // }
+//   }
+// }

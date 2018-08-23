@@ -1,41 +1,152 @@
-#her_optns{
-  @include sections(null, $black_color,100vh,5.5rem 0 0 0);
-
+#Her_optns{
+  @include sections(null, null,null,$black_color);
   .row{
-    .col-md-3{
+    .col-md-2{
       line-height: 0.8rem;
-      padding: 1% 0 0 2%;
-      p{
-        @include fontstyle($sidemenu-itemFont,null,12px);
+      padding: 40px 0 0 0;
+      .getFixed{
+        @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        p{
+          @include fontstyle($sidemenu-itemFont,null,12px);
+          padding-left: 10%;
+          @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+            flex-grow: 0;
+            font-size: 16px;
+            padding: 0 5%;
+            &:nth-child(1){
+              flex-basis: 50%;
+              text-align: right;
+            }
+            &:nth-child(2){
+              flex-basis: 50%;
+              text-align: left;
+            }
+          }
+        }
+        .active{
+          padding-left: 0;
+          color: $orange_color;
+          &:before{
+            content: '>';
+            margin-right: 5%;
+          }
+        }
       }
     }
-    .col-md-8{
-      @include height_items_container();
+    .col-md-9{
+      padding-top: 40px;
       .row{
+        .col-md-12{
+          @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+            flex-wrap: wrap;
+          }
+        }
         .head-item{
           h3{
             margin: 0;
-            @include fontstyle($head-itemFont,2px,25px);
+            &:nth-child(1){
+              @include fontstyle($head-itemFont,2px,26px);
+              @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+                padding: 0!important;
+                flex-basis: 60%;
+                font-size: 18px;
+                text-align: center;
+              }
+            }
+            &:nth-child(2){
+              @include fontstyle($head-itemFont,2px,24px);
+              @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+                padding: 0!important;
+                flex-basis: 30%;
+                font-size: 16px;
+                text-align: center;
+              }
+            }
           }
           .pr-5{
-            border-right: 2px solid $black_color
+            border-right: 2px solid $black_color;
+            @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+              order:2;
+              border-right: 1px solid $black_color;
+            }
+          }
+          .pl-5{
+            @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+              order:3;
+            }
+          }
+          .price-offer{
+            display: flex;
+            flex-grow: 1;
+            @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+              order:1;
+              flex-basis: 100%;
+              margin-bottom: 5%;
+            }
+            div{
+              display: flex;
+              align-items: center;
+              border: 1px solid $orange_color;
+              //padding: 1% 1%;
+              margin-left: 20%;
+              min-width: 35%;
+              @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+                min-width: 50%;
+                padding: 1%;
+                margin: 0 auto;
+              }
+              p{
+                margin: 0;
+                flex-grow: 1;
+                text-align: center;
+                color: $orange_color;
+                letter-spacing: 1px;
+                &:nth-child(1){
+                  font-family: $SegoeUIbold;
+                  font-size: 14px;
+                  border-right: 1px solid $orange_color;
+                }
+                &:nth-child(2){
+                  font-family: $SegoeUIlight;
+                  font-size: 18px;
+                }
+              }
+            }
           }
         }
         .info-item{
+          @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+            padding: 0px 8%;
+            text-align: justify;
+          }
           p{
-            @include fontstyle($info-itemFont,1px,14px);
+            @include fontstyle($info-itemFont,1px,16px);
+            @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+              font-size: 12px;
+            }
           }
         }
         .btns-item{
-
-            .btnBook{
-              @include fontstyle($btns-itemFont,1px,12px,$white_color);
-              @include items_btnBook();
+          @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+            justify-content: center;
+          }
+          .btnBook{
+            @include fontstyle($btns-itemFont,1px,12px,$white_color);
+            @include items_btnBook();
+          }
+          .msgBook{
+            @include fontstyle($msg-itemFont,1px,14px);
+            @include items_msgBook();
+            @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+              font-size: 11px;
+              text-align: center;
             }
-            .msgBook{
-              @include fontstyle($msg-itemFont,null,14px);
-              @include items_msgBook();
-            }
+          }
 
         }
       }

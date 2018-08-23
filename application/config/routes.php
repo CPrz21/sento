@@ -49,12 +49,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'Sento';
+// $route['default_controller'] = 'CMSController';
+$route['default_controller'] = 'en/index';
+// $route['En'] = 'En/home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-
-// $route['items'] = "items/index";
-// $route['itemsCreate']['post'] = "items/store";
-// $route['itemsEdit/(:any)'] = "items/edit/$1";
-// $route['itemsUpdate/(:any)']['put'] = "items/update/$1";
-// $route['itemsDelete/(:any)']['delete'] = "items/delete/$1";
+// $route['(:any)'] = 'Sections/home/$1';

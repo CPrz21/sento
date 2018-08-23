@@ -13,6 +13,7 @@ class CMSModel extends CI_Model {
 	public function getMenu($tipo, $idusuario, $idmenu, $idmenu_deta, $parametro){
 
 		$query = $this->db->query("CALL sp_menu_usuario_B (?,?,?,?,?)",array($tipo, $idusuario, $idmenu, $idmenu_deta, $parametro));
+		$query->next_result(); //mysqli_next_result($this->db->conn_id); 
 
 		if ($query->num_rows() > 0) { 
 			return $query->result();

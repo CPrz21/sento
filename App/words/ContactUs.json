@@ -1,0 +1,50 @@
+[
+    {
+      "id": "1",
+      "position": "1",
+      "title_Es": "DIRECCIÓN",
+      "title_En": "SENTO ADDRESS"
+    },
+    {
+      "id": "2",
+      "position": "2",
+      "title_Es": "RESERVACIÓN",
+      "title_En": "RESERVATION"
+    },
+    {
+      "id": "3",
+      "position": "3",
+      "title_Es": "PREGUNTAS? COMENTARIOS?",
+      "title_En": "QUESTION? COMMENTS?"
+    },
+    {
+      "id": "4",
+      "position": "4",
+      "title_Es": "ENVIAR COMENTARIOS",
+      "title_En": "SENTO COMMENTS"
+    },
+    {
+      "id": "5",
+      "position": "5",
+      "title_Es": "SUSCRIBETE AL NEWSLETTER",
+      "title_En": "NEWSLETTER SIGN UP"
+    },
+    {
+      "id": "6",
+      "position": "6",
+      "title_Es": "SUSCRIBETE PARA OFERTAS ESPECIALES",
+      "title_En": "SIGN UP FOR SPECIAL OFFERS"
+    },
+    {
+      "id": "7",
+      "position": "7",
+      "title_Es": "Ingresa tu email",
+      "title_En": "Enter your email"
+    },
+    {
+      "id": "8",
+      "position": "8",
+      "title_Es": "CONECTATE CON NOSOTROS",
+      "title_En": "CONNECT WITH US"
+    }
+]

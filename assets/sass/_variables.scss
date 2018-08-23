@@ -9,6 +9,7 @@
 //COLORES
 $black_color:hsl(0, 0%, 0%);
 $blackWopacity_color:hsla(0, 0%, 0%,0.7);
+$blackWopacity_gallery:hsla(0, 0%, 0%,0.3);
 $white_color:hsl(0, 0%, 100%);
 $whiteWopacity_color:hsla(0, 0%,95%, 0.7);
 $orange_color:hsl(31, 37%, 52%);
@@ -17,8 +18,14 @@ $gray_color:hsl(0, 0%, 46%);
 //------------------------------------
 //FUENTES DE WEBSITE SENTO
 //------------------------------------
+//FUENTES generales
+$SegoeUIbold:SegoeUISemiboldRegular;
+$SegoeUIlight:SegoeUILightRegular;
+$SegoeUIRegular:SegoeUIRegular;
+
 //FUENTES NAVBAR
 $navFont:SegoeUISemiboldRegular;
+$navFontBtn:SegoeUIRegular;
 
 //FUENTES DE ITEMS (HER_OPTNS, HIM_OPTNS, SPA_OPTNS)
 $h1_font:SegoeUILightRegular;/* H1 de titulos (MAIN, HER, HIM, SPA) */
@@ -41,7 +48,14 @@ $contactFont:SegoeUILightRegular;
 //------------------------------------
 
 //URL BACKGROUNDS DE SECCIONES
-$bg_MainSection:('../Images/sections/4.jpg');
-$bg_HerSection:('../Images/sections/5.jpg');
-$bg_HimSection:('../Images/sections/3.jpg');
-$bg_SpaSection:('../Images/sections/2.jpg');
+$bg_MainSection:('../Images/sections/Home.jpg');
+$bg_HerSection:('../Images/sections/Her.jpg');
+$bg_HimSection:('../Images/sections/Him.jpg');
+$bg_SpaSection:('../Images/sections/Spa.jpg');
+
+
+//MEDIA QUERY SIZES
+$minWidth: 200px;
+$maxWidth: 1023px;
+
+$aproxWidth: 760px;

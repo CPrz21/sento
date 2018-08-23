@@ -6,6 +6,7 @@ RewriteEngine On
 #request to index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+Header add Access-Control-Allow-Origin "*"
 #This last condition enables access to the images and css folders, and the robots.txt file
 RewriteCond $1 !^(index\.php|public|assets|robots\.txt)
 RewriteRule ^(.*)$ /Sento/index.php/$1 [L]

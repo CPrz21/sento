@@ -1,17 +1,65 @@
-#main{
-  @include sections($bg_MainSection);
-
+#Home{
+  @include sections($bg_MainSection, 50% 90%, 105%);
+  .container{
+    @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+      margin-left: 0px;
+      margin-right: 0px;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
   .row{
     @include row_sections();
+    // .wrap-dd-select{
+    //   position: absolute;
+    //   font-size: 14px;
+    //   padding: 0.4% 0.8%;
+    //   top: 20px;
+    //   right: 20px;
+    //   width: 5%;
+    //   border: 1px solid black;
+    //   border-radius: 0px;
+    //   background-color: transparent;
+    //   color: $black_color;
+    //   &:after{
+    //     border-color: $black_color transparent;
+    //   }
+    //   ul{
+    //     border: 2px solid black;
+    //     li{
+    //       padding: 0;
+    //       // &:nth-child(1){
+    //       //   border-bottom: 2px solid $black_color;
+    //       // }
+    //       a{
+    //         color: $black_color;
+    //       }
+    //     }
+    //   }
+    // }
     .col-md-12{
+      margin-top: 5%;
       text-align: center;
       h1{
         @include fontstyle($h1_font,0.8rem,null,$white_color);
+        @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+          //letter-spacing: 30px;
+          font-size:30px;
+        }
+      }
+      @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+        margin-bottom: 12%;
       }
     }
     .col-md-5{
       border-bottom: 1px solid $white_color;
       margin: 0 auto;
+      max-width: 50%;
+      margin-bottom: 1%;
+      @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+        width: 60%;
+        max-width: 60%;
+      }
     }
     .col-md-6{
       margin:0 auto;
@@ -20,6 +68,16 @@
         @include fontstyle($h6_font,0.2rem,null);
         padding: 0.4rem 0;
       }
+      @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+        display: none;
+      }
     }
+    @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+      align-items: flex-end;
+    }
+  }
+  @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+    background-size: cover;
+    background-position: 16%;
   }
 }

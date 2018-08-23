@@ -6,12 +6,35 @@
 
 
 
-app.factory('PostResource', ['$resource', function($resource) {
-return $resource('http://jsonplaceholder.typicode.com/posts/:id', {id:"@id"},
+app.factory('getSecciones', ['$resource', function($resource) {
+return $resource(base_url+'SentoData/getSecciones',null,
     {
-        update: { method:'PUT' }
+      'post': {
+             method: "POST",
+             isArray:true,
+             headers: {
+                       'Content-Type': 'application/x-www-form-urlencoded'
+                     }
+         }
     });
 }])
+.factory('getIdioma', ['$resource', function($resource) {
+return $resource(base_url+'SentoData/getIdioma',null,
+    {
+      'post': {
+             method: "POST"
+         }
+    });
+}])
+.factory('ContactusWords', ['$resource', function($resource) {
+return $resource('app/words/ContactUs.json',null,
+    {
+      'get': {
+             isArray:true,
+         }
+    });
+}])
+
 
 // .factory("idioma",function() {
 //   return "es-es";

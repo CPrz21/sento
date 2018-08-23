@@ -1,7 +1,7 @@
 // =============================================================================
 // MIXINS FOR OPTNS SECTIONS (HER_OPTNS,HIM_OPTNS,SPA_OPTNS)
 // =============================================================================
-@mixin height_items_container($height: 80vh,$overflow: auto) {
+@mixin height_items_container($height: 90vh,$overflow: auto) {//quitar esta opcion 
   height: $height;
   overflow: $overflow;
 }

@@ -74,12 +74,12 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-
+	/*
 	'dsn'		=> '',
 	'hostname' 	=> 'localhost',
 	'username' 	=> 'root',
-	'password' 	=> '',
-	'database' 	=> 'postapp',
+	'password' 	=> 'carlos', 		
+	'database' 	=> 'sento_web',    		
 	'dbdriver' 	=> 'mysqli',
 	'port' 		=> '3306',
 	'dbprefix' 	=> '',
@@ -95,26 +95,27 @@ $db['default'] = array(
 	'stricton' 	=> FALSE,
 	'failover' 	=> array(),
 	'save_queries' => TRUE
-
-
-	// 'dsn'		=> '',
-	// 'hostname' 	=> '166.62.93.82',
-	// 'username' 	=> 'sentolux_dev',
-	// 'password' 	=> 'proaxtexsb',
-	// 'database' 	=> 'sentolux_db',
-	// 'dbdriver' 	=> 'mysqli',
-	// 'port' 		=> '3306',
-	// 'dbprefix' 	=> '',
-	// 'pconnect' 	=> FALSE,
-	// 'db_debug' 	=> (ENVIRONMENT !== 'production'),
-	// 'cache_on' 	=> FALSE,
-	// 'cachedir' 	=> '',
-	// 'char_set' 	=> 'utf8',
-	// 'dbcollat' 	=> 'utf8_general_ci',
-	// 'swap_pre' 	=> '',
-	// 'encrypt' 	=> FALSE,
-	// 'compress' 	=> FALSE,
-	// 'stricton' 	=> FALSE,
-	// 'failover' 	=> array(),
-	// 'save_queries' => TRUE
+	*/
+	
+	'dsn'		=> '',
+	'hostname' 	=> '166.62.93.82', 			
+	'username' 	=> 'sentolux_dev', 			
+	'password' 	=> 'proaxtexsb', 		
+	'database' 	=> 'sentolux_db',    		
+	'dbdriver' 	=> 'mysqli',
+	'port' 		=> '3306',
+	'dbprefix' 	=> '',
+	'pconnect' 	=> FALSE,
+	'db_debug' 	=> (ENVIRONMENT !== 'production'),
+	'cache_on' 	=> FALSE,
+	'cachedir' 	=> '',
+	'char_set' 	=> 'utf8',
+	'dbcollat' 	=> 'utf8_general_ci',
+	'swap_pre' 	=> '',
+	'encrypt' 	=> FALSE,
+	'compress' 	=> FALSE,
+	'stricton' 	=> FALSE,
+	'failover' 	=> array(),
+	'save_queries' => TRUE
 );
+

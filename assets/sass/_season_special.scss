@@ -1,0 +1,191 @@
+#SeasonSpecial{
+  height: 100vh;
+  .container, .row, .seasonspecial-container, .seasonspecial-image{
+    height: 100%;
+  }
+
+  .seasonspecial-container{
+    flex-wrap: wrap;
+  }
+  .seasonspecial-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+      background:url('../Images/temporal/temporada.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 10rem;
+      margin-top: 80px;
+      padding: 0;
+      background-position: center;
+    }
+    .season-img{
+      width: 80%;
+      @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+        display: none;
+      }
+    }
+  }
+  .seasonspecial-information{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+      padding: 0;
+    }
+    .seasonspecial-information-container{
+      .s-title{
+        letter-spacing: 8px;
+        @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+          text-align: center;
+          font-size: 20px;
+        }
+        &:after{
+          width: 5rem;
+        }
+      }
+      .s-text{
+        margin-bottom: 2rem;
+        @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+          text-align: center;
+          font-size: 11px;
+          margin-bottom: 1rem;
+        }
+      }
+      .seasonspecial-slider{
+        .seasonspecial-information-btns{
+          margin-bottom: 3rem;
+          @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+          }
+          &:after{
+            background-color: #b28657;
+            bottom: -1.5rem;
+            content: '';
+            height: 2px;
+            left: 0;
+            position: absolute;
+            width: 9.5rem;
+            @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+              bottom: -0.5rem;
+              left:27%;
+            }
+          }
+          .sento-form-btns{
+            @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+              border: 1px solid;
+              padding: 0.5rem 1rem;
+            }
+          }
+          .buttons-slider-res{
+            display: none!important;
+            @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+              display: flex!important;
+              align-items: center;
+              i{
+                font-size: 32px;
+                color: $orange_color;
+                cursor: pointer;
+              }
+              .pagingInfo{
+                margin: 0 1rem;
+                font-family: $SegoeUIlight;
+                font-size: 14px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+        .slider{
+          .slider-container{
+            .slider-header{
+              display: flex;
+              h3{
+                font-family: $SegoeUIlight;
+                font-weight: bold;
+                font-size: 18px;
+                color:$orange_color;
+                letter-spacing: 2px;
+                @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+                  font-size: 14px;
+                }
+                &:nth-child(1){
+                  margin: 0 3rem 0 0;
+                  position: relative;
+                  &:after{
+                    background-color: #b28657;
+                    content: '';
+                    height: 1.2rem;
+                    right: -1.5rem;
+                    position: absolute;
+                    width: 2px;
+                    top: 0.2rem;
+                    @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+                      top:0px;
+                    }
+                  }
+                }
+              }
+            }
+            .slider-items{
+              margin-bottom: 1rem;
+              height: 7rem;
+              max-height: 7rem;
+              overflow: auto;
+              @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+                height: 5rem;
+              }
+              .s-text{
+                margin-bottom: 0.2rem;
+                @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+                  text-align:left;
+                }
+                &:before{
+                  content: '-';
+                }
+              }
+            }
+            .slider-footer{
+              display: flex;
+              align-items: center;
+              @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+                flex-wrap: wrap;
+                .msgBook{
+                  text-align: left;
+                }
+              }
+            }
+          }
+        }
+        .buttons-slider{
+          display: flex;
+          align-items: center;
+          margin-top: 8%;
+          @media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+            display: none!important;
+          }
+          i{
+            font-size: 32px;
+            color: $orange_color;
+            cursor: pointer;
+          }
+          .pagingInfo{
+            margin: 0 1rem;
+            font-family: $SegoeUIlight;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -10,9 +10,14 @@ class UserModel extends CI_Model {
 	public function login($user, $pwrd){
 
 		$query = $this->db->query("CALL sp_usuario_login_B (1,0,?,?,'') ", array($user, $pwrd));
-		if ($query->num_rows() > 0) { 
+		$query->next_result();
+		
+		if ($query->num_rows() > 0) 
+		{ 
 			return $query->row();
-		}else{  
+		}
+		else
+		{  
 			return false;	
 		}
 
