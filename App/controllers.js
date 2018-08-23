@@ -348,7 +348,13 @@ app.run(function($rootScope) {
     });
 
 })
+.controller('BookingController',function($scope,$rootScope,$q,$httpParamSerializerJQLike,getSecciones){
 
+  angular.element(document).ready(function () {
+    $rootScope.viewer = true;
+  });
+
+})
 
 function Secciones(result){
 

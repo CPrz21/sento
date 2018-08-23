@@ -60,7 +60,7 @@ class Es extends CI_Controller {
 		$this->load->view('Sento/SpecialGifts');
 		$this->load->view('Sento/footer_sento');
 	}
-	
+
 	public function seasonspecial(){
 		$this->getIdioma();
 		$this->loadHeader();
@@ -83,6 +83,13 @@ class Es extends CI_Controller {
 		$this->load->view('Sento/ContactUs');
 		$this->load->view('Sento/footer_sento');
 
+	}
+
+	public function booking(){
+		$this->getIdioma();
+		$this->loadHeader();
+		$this->load->view('Sento/booking');
+		$this->load->view('Sento/footer_sento');
 	}
 
 	public function getIdioma(){

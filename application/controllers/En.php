@@ -85,6 +85,13 @@ class En extends CI_Controller {
 
 	}
 
+	public function booking(){
+		$this->getIdioma();
+		$this->loadHeader();
+		$this->load->view('Sento/booking');
+		$this->load->view('Sento/footer_sento');
+	}
+
 	public function getIdioma(){
 		if ($this->session->userdata('language') == 'ES') {
 			$this->session->set_userdata(array('language'=> 'EN'));
