@@ -25,12 +25,18 @@
 	<!-- BOOTSTRAP 4 CSS -->
 	<link rel="stylesheet" href="<?php echo $assets_uri; ?>css/plugins/bootstrap/bootstrap.css">
 
+	<!-- JQUERY STEPS CSS -->
+	<link rel="stylesheet" href="<?php echo $assets_uri; ?>css/plugins/jquery-steps/jquery.steps.css">
+
 	<!-- JQUERY 3.3.1 -->
 	<script src="<?php echo $libs_url; ?>jquery/jquery-3.3.1.min.js"></script>
 
 
 	<!-- JQUERY MIGRATE -->
 	<script src="<?php echo $libs_url; ?>jquery/jquery-migrate-1.4.1.min.js"></script>
+
+	<!-- JQUERY STEPS -->
+	<script src="<?php echo $libs_url; ?>jquery-steps/jquery.steps.min.js"></script>
 
 	<!-- SLICK -->
 	<script src="<?php echo $libs_url; ?>slick/slick.min.js"></script>

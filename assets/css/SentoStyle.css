@@ -47,6 +47,9 @@
 .w-border-radius {
   border-radius: 0; }
 
+.height-100 {
+  height: 100vh; }
+
 .s-down {
   position: absolute;
   width: 100%;
@@ -68,6 +71,11 @@
     @media only screen and (min-width: 200px) and (max-width: 1023px) {
       .s-down p {
         margin: 0 0 1% 2%; } }
+
+.section-title {
+  font-family: SegoeUILightRegular;
+  letter-spacing: 0.8rem;
+  color: white; }
 
 .snto-title {
   font-family: SegoeUILightRegular;
@@ -2006,5 +2014,113 @@ img.hover-shadow {
             padding: 0px;
             margin: 0 1%;
             font-size: 25px; } }
+
+#Booking .main-booking {
+  height: 100vh;
+  color: white;
+  background-image: url("../Images/sections/BOOK.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+  @media only screen and (min-width: 200px) and (max-width: 1023px) {
+    #Booking .main-booking {
+      background-position: 40%; } }
+#Booking #book-steps .steps {
+  background-color: #b28657; }
+  #Booking #book-steps .steps ul {
+    width: 80%;
+    margin: 0 auto; }
+    #Booking #book-steps .steps ul li.disabled a {
+      color: #9e764f; }
+      #Booking #book-steps .steps ul li.disabled a .number {
+        border: 1px solid #9e764f; }
+    #Booking #book-steps .steps ul li a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent; }
+      #Booking #book-steps .steps ul li a .number {
+        border: 1px solid #dee2e6; }
+      #Booking #book-steps .steps ul li a .tab-title {
+        letter-spacing: 3px; }
+#Booking #book-steps .content {
+  background-color: transparent; }
+#Booking .shop-item {
+  align-items: center;
+  position: relative;
+  justify-content: space-between; }
+  #Booking .shop-item i {
+    font-size: 2rem;
+    color: gray;
+    position: absolute;
+    left: 0; }
+  #Booking .shop-item h5 {
+    font-family: SegoeUISemiboldRegular;
+    font-weight: bold;
+    margin: 0 0 0 0.8rem;
+    font-size: 18px;
+    letter-spacing: 2px; }
+  #Booking .shop-item p {
+    font-size: 16px;
+    letter-spacing: 2px; }
+#Booking .gift-check {
+  /* The container */
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */ }
+  #Booking .gift-check .container {
+    display: block;
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #b28657;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+  #Booking .gift-check .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer; }
+  #Booking .gift-check .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: transparent;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: 1px solid #b28657; }
+  #Booking .gift-check .container:hover input ~ .checkmark {
+    background-color: #9e764f; }
+  #Booking .gift-check .container input:checked ~ .checkmark {
+    background-color: transparent; }
+  #Booking .gift-check .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none; }
+  #Booking .gift-check .container input:checked ~ .checkmark:after {
+    display: block; }
+  #Booking .gift-check .container .checkmark:after {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 5px;
+    height: 10px;
+    border: solid #b28657;
+    border-width: 0 1.5px 1.5px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin: auto; }
 
 /*# sourceMappingURL=SentoStyle.css.map */
